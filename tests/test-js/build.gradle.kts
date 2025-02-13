@@ -15,7 +15,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath("love.forte.plugin.suspend-transform:suspend-transform-plugin-gradle:2.1.0-0.9.4")
+        classpath("love.forte.plugin.suspend-transform:suspend-transform-plugin-gradle:2.1.0-0.11.0")
     }
 }
 
@@ -35,6 +35,7 @@ kotlin {
 
     js(IR) {
         nodejs()
+
         useEsModules()
         generateTypeScriptDefinitions()
         binaries.executable()
@@ -50,13 +51,15 @@ kotlin {
     }
 
     sourceSets {
-        named("jsMain") {
-            dependencies {
-                implementation(kotlin("stdlib"))
-                api(libs.kotlinx.coroutines.core)
-                api(project(":runtime:suspend-transform-annotation"))
-                api(project(":runtime:suspend-transform-runtime"))
-            }
+        jsMain.dependencies {
+            implementation(kotlin("stdlib"))
+            implementation(libs.kotlinx.coroutines.core)
+            implementation(project(":runtime:suspend-transform-annotation"))
+            implementation(project(":runtime:suspend-transform-runtime"))
+        }
+        jsTest.dependencies {
+            implementation(kotlin("test"))
+            implementation(libs.kotlinx.coroutines.test)
         }
     }
 }

@@ -147,6 +147,11 @@ data class SuspendTransformUserDataFir(
     val transformer: Transformer
 )
 
+data class SuspendTransformBridgeFunDataFir(
+    val asProperty: Boolean,
+    val transformer: Transformer
+)
+
 fun FirNamedFunctionSymbol.asOriginSymbol(
     targetMarker: ClassId?,
     typeParameters: List<FirTypeParameter>,

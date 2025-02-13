@@ -50,17 +50,33 @@ class SuspendTransformerEnvironmentConfigurator(testServices: TestServices) : En
                 it
             )
         }
+
+        // register coroutines
+        getRuntimeJarFile("kotlinx.coroutines.CoroutineScope")?.let {
+            configuration.addJvmClasspathRoot(
+                it
+            )
+        }
     }
 
     private fun getRuntimeJarFile(className: String): File? {
         try {
-            val clazz = Class.forName(className)
-            return PathUtil.getResourcePathForClass(clazz)
-        } catch (e: ClassNotFoundException) {
+            return getRuntimeJarFile(Class.forName(className))
+        } catch (_: ClassNotFoundException) {
             System.err.println("Runtime jar '$className' not found!")
 //            assert(false) { "Runtime jar '$className' not found!" }
         }
         return null
+    }
+
+    private fun getRuntimeJarFile(clazz: Class<*>): File {
+//        try {
+            return PathUtil.getResourcePathForClass(clazz)
+//        } catch (e: ClassNotFoundException) {
+//            System.err.println("Runtime jar '$clazz' not found!")
+////            assert(false) { "Runtime jar '$className' not found!" }
+//        }
+//        return null
     }
 
 }

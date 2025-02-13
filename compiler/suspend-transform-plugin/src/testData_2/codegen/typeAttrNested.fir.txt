@@ -1,0 +1,18 @@
+FILE: Main.kt
+    public abstract interface Api<T : R|kotlin/Any|> : R|kotlin/Any| {
+        public abstract suspend fun run(): R|T|
+
+    }
+    public abstract interface ApiResult<T : R|kotlin/Any|> : R|kotlin/Any| {
+    }
+    public abstract interface ApiExecutable : R|kotlin/Any| {
+        @R|love/forte/plugin/suspendtrans/annotation/JvmAsync|() @R|love/forte/plugin/suspendtrans/annotation/TargetMarker|(value = String(ZXhlY3V0ZUFwaUV4ZWN1dGFibGVudWxsQXBpPFQ+)) public abstract suspend fun <T : R|kotlin/Any|> execute(api: R|Api<T>|): R|ApiResult<Api<T>>|
+
+        @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public open fun <T : R|kotlin/Any|> executeAsync(api: R|Api<T>|): R|java/util/concurrent/CompletableFuture<out ApiResult<Api<T>>>| {
+            ^executeAsync R|love/forte/plugin/suspendtrans/runtime/$runInAsync$|(suspend fun <anonymous>(): R|ApiResult<Api<T>>| <inline=Unknown>  {
+                ^ this@R|/ApiExecutable|.R|/ApiExecutable.execute|(R|<local>/api|)
+            }
+            , (this@R|/ApiExecutable| as? R|kotlinx/coroutines/CoroutineScope|))
+        }
+
+    }

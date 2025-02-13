@@ -26,10 +26,7 @@ import java.lang.reflect.Modifier
 import java.util.concurrent.CompletableFuture
 import kotlin.reflect.KTypeParameter
 import kotlin.reflect.full.memberProperties
-import kotlin.test.Test
-import kotlin.test.assertEquals
-import kotlin.test.assertFalse
-import kotlin.test.assertTrue
+import kotlin.test.*
 
 
 @JvmBlocking
@@ -59,6 +56,11 @@ interface ITypedTrans1<T : Foo> {
 @JvmAsync(asProperty = true)
 interface TypedTrans1Impl<T : Bar> : ITypedTrans1<T> {
     override suspend fun value(): T
+}
+
+class STPTrans1Impl : STPTrans1 {
+    override suspend fun run1(): Int = 1
+    override suspend fun run2(): String = "run2"
 }
 
 /**
@@ -125,7 +127,6 @@ class SuspendTransformTests {
 
     }
 
-
     @Test
     fun `typed interface test`() {
         with(ITypedTrans1::class) {
@@ -148,5 +149,28 @@ class SuspendTransformTests {
                 it.name == "valueAsync" && it.returnType.classifier == CompletableFuture::class
             })
         }
+    }
+
+    @Test
+    fun `invoke test`() {
+        val stp = STPTrans1Impl()
+
+        val run1BlockingMethod = STPTrans1::class.java.getMethod("getRun1")
+        val run2BlockingMethod = STPTrans1::class.java.getMethod("getRun2")
+
+        val run1AsyncMethod = STPTrans1::class.java.getMethod("getRun1Ay")
+        val run2AsyncMethod = STPTrans1::class.java.getMethod("getRun2Ay")
+
+        assertEquals(1, run1BlockingMethod.invoke(stp))
+        assertEquals("run2", run2BlockingMethod.invoke(stp))
+
+        val run1Async = run1AsyncMethod.invoke(stp)
+        val run2Async = run2AsyncMethod.invoke(stp)
+
+        assertIs<CompletableFuture<Int>>(run1Async)
+        assertIs<CompletableFuture<String>>(run2Async)
+
+        assertEquals(1, run1Async.get())
+        assertEquals("run2", run2Async.get())
     }
 }

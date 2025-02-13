@@ -1,0 +1,77 @@
+FILE fqName:<root> fileName:/Main.kt
+  CLASS INTERFACE name:Api modality:ABSTRACT visibility:public superTypes:[kotlin.Any]
+    $this: VALUE_PARAMETER INSTANCE_RECEIVER name:<this> type:<root>.Api<T of <root>.Api>
+    TYPE_PARAMETER name:T index:0 variance: superTypes:[kotlin.Any] reified:false
+    FUN FAKE_OVERRIDE name:equals visibility:public modality:OPEN <> ($this:kotlin.Any, other:kotlin.Any?) returnType:kotlin.Boolean [fake_override,operator]
+      overridden:
+        public open fun equals (other: kotlin.Any?): kotlin.Boolean declared in kotlin.Any
+      $this: VALUE_PARAMETER name:<this> type:kotlin.Any
+      VALUE_PARAMETER name:other index:0 type:kotlin.Any?
+    FUN FAKE_OVERRIDE name:hashCode visibility:public modality:OPEN <> ($this:kotlin.Any) returnType:kotlin.Int [fake_override]
+      overridden:
+        public open fun hashCode (): kotlin.Int declared in kotlin.Any
+      $this: VALUE_PARAMETER name:<this> type:kotlin.Any
+    FUN FAKE_OVERRIDE name:toString visibility:public modality:OPEN <> ($this:kotlin.Any) returnType:kotlin.String [fake_override]
+      overridden:
+        public open fun toString (): kotlin.String declared in kotlin.Any
+      $this: VALUE_PARAMETER name:<this> type:kotlin.Any
+    FUN name:run visibility:public modality:ABSTRACT <> ($this:<root>.Api<T of <root>.Api>) returnType:T of <root>.Api [suspend]
+      $this: VALUE_PARAMETER name:<this> type:<root>.Api<T of <root>.Api>
+  CLASS INTERFACE name:ApiExecutable modality:ABSTRACT visibility:public superTypes:[kotlin.Any]
+    $this: VALUE_PARAMETER INSTANCE_RECEIVER name:<this> type:<root>.ApiExecutable
+    FUN FAKE_OVERRIDE name:equals visibility:public modality:OPEN <> ($this:kotlin.Any, other:kotlin.Any?) returnType:kotlin.Boolean [fake_override,operator]
+      overridden:
+        public open fun equals (other: kotlin.Any?): kotlin.Boolean declared in kotlin.Any
+      $this: VALUE_PARAMETER name:<this> type:kotlin.Any
+      VALUE_PARAMETER name:other index:0 type:kotlin.Any?
+    FUN FAKE_OVERRIDE name:hashCode visibility:public modality:OPEN <> ($this:kotlin.Any) returnType:kotlin.Int [fake_override]
+      overridden:
+        public open fun hashCode (): kotlin.Int declared in kotlin.Any
+      $this: VALUE_PARAMETER name:<this> type:kotlin.Any
+    FUN FAKE_OVERRIDE name:toString visibility:public modality:OPEN <> ($this:kotlin.Any) returnType:kotlin.String [fake_override]
+      overridden:
+        public open fun toString (): kotlin.String declared in kotlin.Any
+      $this: VALUE_PARAMETER name:<this> type:kotlin.Any
+    FUN GENERATED[love.forte.plugin.suspendtrans.fir.SuspendTransformK2V3Key] name:executeAsync visibility:public modality:OPEN <T> ($this:<root>.ApiExecutable, api:<root>.Api<T of <root>.ApiExecutable.executeAsync>) returnType:java.util.concurrent.CompletableFuture
+      annotations:
+        Api4J
+      TYPE_PARAMETER name:T index:0 variance: superTypes:[kotlin.Any] reified:false
+      $this: VALUE_PARAMETER name:<this> type:<root>.ApiExecutable
+      VALUE_PARAMETER name:api index:0 type:<root>.Api<T of <root>.ApiExecutable.executeAsync>
+      BLOCK_BODY
+        RETURN type=kotlin.Nothing from='public open fun executeAsync <T> (api: <root>.Api<T of <root>.ApiExecutable.executeAsync>): java.util.concurrent.CompletableFuture declared in <root>.ApiExecutable'
+          CALL 'public final fun $runInAsync$ <T> (block: kotlin.coroutines.SuspendFunction0<T of love.forte.plugin.suspendtrans.runtime.$runInAsync$>, scope: kotlinx.coroutines.CoroutineScope?): java.util.concurrent.CompletableFuture declared in love.forte.plugin.suspendtrans.runtime' type=java.util.concurrent.CompletableFuture origin=null
+            <T>: <none>
+            block: FUN_EXPR type=kotlin.coroutines.SuspendFunction0<<root>.ApiResult<<root>.Api<T of <root>.ApiExecutable.execute>>> origin=LAMBDA
+              FUN LOCAL_FUNCTION_FOR_LAMBDA name:<anonymous> visibility:local modality:FINAL <> () returnType:<root>.ApiResult<<root>.Api<T of <root>.ApiExecutable.execute>> [suspend]
+                BLOCK_BODY
+                  RETURN type=kotlin.Nothing from='local final fun <anonymous> (): <root>.ApiResult<<root>.Api<T of <root>.ApiExecutable.execute>> declared in <root>.ApiExecutable.executeAsync'
+                    CALL 'public abstract fun execute <T> (api: <root>.Api<T of <root>.ApiExecutable.execute>): <root>.ApiResult<<root>.Api<T of <root>.ApiExecutable.execute>> declared in <root>.ApiExecutable' type=<root>.ApiResult<<root>.Api<T of <root>.ApiExecutable.execute>> origin=null
+                      <T>: <none>
+                      $this: GET_VAR '<this>: <root>.ApiExecutable declared in <root>.ApiExecutable.executeAsync' type=<root>.ApiExecutable origin=null
+                      api: GET_VAR 'api: <root>.Api<T of <root>.ApiExecutable.executeAsync> declared in <root>.ApiExecutable.executeAsync' type=<root>.Api<T of <root>.ApiExecutable.executeAsync> origin=null
+            scope: TYPE_OP type=kotlinx.coroutines.CoroutineScope? origin=SAFE_CAST typeOperand=kotlinx.coroutines.CoroutineScope
+              GET_VAR '<this>: <root>.ApiExecutable declared in <root>.ApiExecutable.executeAsync' type=<root>.ApiExecutable origin=null
+    FUN name:execute visibility:public modality:ABSTRACT <T> ($this:<root>.ApiExecutable, api:<root>.Api<T of <root>.ApiExecutable.execute>) returnType:<root>.ApiResult<<root>.Api<T of <root>.ApiExecutable.execute>> [suspend]
+      annotations:
+        JvmAsync(baseName = <null>, suffix = <null>, asProperty = <null>)
+        JvmSynthetic
+      TYPE_PARAMETER name:T index:0 variance: superTypes:[kotlin.Any] reified:false
+      $this: VALUE_PARAMETER name:<this> type:<root>.ApiExecutable
+      VALUE_PARAMETER name:api index:0 type:<root>.Api<T of <root>.ApiExecutable.execute>
+  CLASS INTERFACE name:ApiResult modality:ABSTRACT visibility:public superTypes:[kotlin.Any]
+    $this: VALUE_PARAMETER INSTANCE_RECEIVER name:<this> type:<root>.ApiResult<T of <root>.ApiResult>
+    TYPE_PARAMETER name:T index:0 variance: superTypes:[kotlin.Any] reified:false
+    FUN FAKE_OVERRIDE name:equals visibility:public modality:OPEN <> ($this:kotlin.Any, other:kotlin.Any?) returnType:kotlin.Boolean [fake_override,operator]
+      overridden:
+        public open fun equals (other: kotlin.Any?): kotlin.Boolean declared in kotlin.Any
+      $this: VALUE_PARAMETER name:<this> type:kotlin.Any
+      VALUE_PARAMETER name:other index:0 type:kotlin.Any?
+    FUN FAKE_OVERRIDE name:hashCode visibility:public modality:OPEN <> ($this:kotlin.Any) returnType:kotlin.Int [fake_override]
+      overridden:
+        public open fun hashCode (): kotlin.Int declared in kotlin.Any
+      $this: VALUE_PARAMETER name:<this> type:kotlin.Any
+    FUN FAKE_OVERRIDE name:toString visibility:public modality:OPEN <> ($this:kotlin.Any) returnType:kotlin.String [fake_override]
+      overridden:
+        public open fun toString (): kotlin.String declared in kotlin.Any
+      $this: VALUE_PARAMETER name:<this> type:kotlin.Any

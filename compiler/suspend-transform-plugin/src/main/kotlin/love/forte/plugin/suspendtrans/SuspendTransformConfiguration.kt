@@ -2,10 +2,14 @@ package love.forte.plugin.suspendtrans
 
 import kotlinx.serialization.Serializable
 
+// TODO 序列化改成二进制的，比如 protobuf，
+//  然后使用base64或hash进行传递，避免谜之转义
+
 @Serializable
 data class FunctionInfo(
     var packageName: String,
-    var className: String?,
+    @Deprecated("Top-Level function supported only")
+    var className: String? = null,
     var functionName: String,
 )
 
@@ -162,8 +166,11 @@ open class SuspendTransformConfiguration {
     /**
      * 在 K2 中，用于使 IR 的合成函数可以定位到 FIR 中原始函数的辅助注解。
      *
+     * 昙花一现，在 `*-0.11.0` 之后不再需要此类过渡用注解。
+     *
      * @since *-0.10.0
      */
+    @Deprecated("Unused after *-0.11.0")
     open var targetMarker: ClassInfo? = targetMarkerClassInfo
 
     open fun clear() {

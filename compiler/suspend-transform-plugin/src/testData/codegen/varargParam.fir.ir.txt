@@ -1,0 +1,64 @@
+FILE fqName:<root> fileName:/Main.kt
+  CLASS CLASS name:MyClass modality:ABSTRACT visibility:public superTypes:[kotlin.Any]
+    $this: VALUE_PARAMETER INSTANCE_RECEIVER name:<this> type:<root>.MyClass
+    CONSTRUCTOR visibility:public <> () returnType:<root>.MyClass [primary]
+      BLOCK_BODY
+        DELEGATING_CONSTRUCTOR_CALL 'public constructor <init> () declared in kotlin.Any'
+        INSTANCE_INITIALIZER_CALL classDescriptor='CLASS CLASS name:MyClass modality:ABSTRACT visibility:public superTypes:[kotlin.Any]'
+    FUN FAKE_OVERRIDE name:equals visibility:public modality:OPEN <> ($this:kotlin.Any, other:kotlin.Any?) returnType:kotlin.Boolean [fake_override,operator]
+      overridden:
+        public open fun equals (other: kotlin.Any?): kotlin.Boolean declared in kotlin.Any
+      $this: VALUE_PARAMETER name:<this> type:kotlin.Any
+      VALUE_PARAMETER name:other index:0 type:kotlin.Any?
+    FUN FAKE_OVERRIDE name:hashCode visibility:public modality:OPEN <> ($this:kotlin.Any) returnType:kotlin.Int [fake_override]
+      overridden:
+        public open fun hashCode (): kotlin.Int declared in kotlin.Any
+      $this: VALUE_PARAMETER name:<this> type:kotlin.Any
+    FUN FAKE_OVERRIDE name:toString visibility:public modality:OPEN <> ($this:kotlin.Any) returnType:kotlin.String [fake_override]
+      overridden:
+        public open fun toString (): kotlin.String declared in kotlin.Any
+      $this: VALUE_PARAMETER name:<this> type:kotlin.Any
+    FUN GENERATED[love.forte.plugin.suspendtrans.fir.SuspendTransformK2V3Key] name:deleteAllAsync visibility:public modality:OPEN <> ($this:<root>.MyClass, option:kotlin.Int) returnType:java.util.concurrent.CompletableFuture
+      annotations:
+        Api4J
+      $this: VALUE_PARAMETER name:<this> type:<root>.MyClass
+      VALUE_PARAMETER name:option index:0 type:kotlin.Int
+      BLOCK_BODY
+        RETURN type=kotlin.Nothing from='public open fun deleteAllAsync (option: kotlin.Int): java.util.concurrent.CompletableFuture declared in <root>.MyClass'
+          CALL 'public final fun $runInAsync$ <T> (block: kotlin.coroutines.SuspendFunction0<T of love.forte.plugin.suspendtrans.runtime.$runInAsync$>, scope: kotlinx.coroutines.CoroutineScope?): java.util.concurrent.CompletableFuture declared in love.forte.plugin.suspendtrans.runtime' type=java.util.concurrent.CompletableFuture origin=null
+            <T>: <none>
+            block: FUN_EXPR type=kotlin.coroutines.SuspendFunction0<kotlin.Int> origin=LAMBDA
+              FUN LOCAL_FUNCTION_FOR_LAMBDA name:<anonymous> visibility:local modality:FINAL <> () returnType:kotlin.Int [suspend]
+                BLOCK_BODY
+                  RETURN type=kotlin.Nothing from='local final fun <anonymous> (): kotlin.Int declared in <root>.MyClass.deleteAllAsync'
+                    CALL 'public open fun deleteAll (option: kotlin.Int): kotlin.Int declared in <root>.MyClass' type=kotlin.Int origin=null
+                      $this: GET_VAR '<this>: <root>.MyClass declared in <root>.MyClass.deleteAllAsync' type=<root>.MyClass origin=null
+                      option: GET_VAR 'option: kotlin.Int declared in <root>.MyClass.deleteAllAsync' type=kotlin.Int origin=null
+            scope: TYPE_OP type=kotlinx.coroutines.CoroutineScope? origin=SAFE_CAST typeOperand=kotlinx.coroutines.CoroutineScope
+              GET_VAR '<this>: <root>.MyClass declared in <root>.MyClass.deleteAllAsync' type=<root>.MyClass origin=null
+    FUN GENERATED[love.forte.plugin.suspendtrans.fir.SuspendTransformK2V3Key] name:deleteAllBlocking visibility:public modality:OPEN <> ($this:<root>.MyClass, option:kotlin.Int) returnType:kotlin.Int
+      annotations:
+        Api4J
+      $this: VALUE_PARAMETER name:<this> type:<root>.MyClass
+      VALUE_PARAMETER name:option index:0 type:kotlin.Int
+      BLOCK_BODY
+        RETURN type=kotlin.Nothing from='public open fun deleteAllBlocking (option: kotlin.Int): kotlin.Int declared in <root>.MyClass'
+          CALL 'public final fun $runInBlocking$ <T> (block: kotlin.coroutines.SuspendFunction0<T of love.forte.plugin.suspendtrans.runtime.$runInBlocking$>): T of love.forte.plugin.suspendtrans.runtime.$runInBlocking$ declared in love.forte.plugin.suspendtrans.runtime' type=kotlin.Int origin=null
+            <T>: <none>
+            block: FUN_EXPR type=kotlin.coroutines.SuspendFunction0<kotlin.Int> origin=LAMBDA
+              FUN LOCAL_FUNCTION_FOR_LAMBDA name:<anonymous> visibility:local modality:FINAL <> () returnType:kotlin.Int [suspend]
+                BLOCK_BODY
+                  RETURN type=kotlin.Nothing from='local final fun <anonymous> (): kotlin.Int declared in <root>.MyClass.deleteAllBlocking'
+                    CALL 'public open fun deleteAll (option: kotlin.Int): kotlin.Int declared in <root>.MyClass' type=kotlin.Int origin=null
+                      $this: GET_VAR '<this>: <root>.MyClass declared in <root>.MyClass.deleteAllBlocking' type=<root>.MyClass origin=null
+                      option: GET_VAR 'option: kotlin.Int declared in <root>.MyClass.deleteAllBlocking' type=kotlin.Int origin=null
+    FUN name:deleteAll visibility:public modality:OPEN <> ($this:<root>.MyClass, option:kotlin.Int) returnType:kotlin.Int [suspend]
+      annotations:
+        JvmBlocking(baseName = <null>, suffix = <null>, asProperty = <null>)
+        JvmAsync(baseName = <null>, suffix = <null>, asProperty = <null>)
+        JvmSynthetic
+      $this: VALUE_PARAMETER name:<this> type:<root>.MyClass
+      VALUE_PARAMETER name:option index:0 type:kotlin.Int
+      BLOCK_BODY
+        RETURN type=kotlin.Nothing from='public open fun deleteAll (option: kotlin.Int): kotlin.Int declared in <root>.MyClass'
+          CONST Int type=kotlin.Int value=1

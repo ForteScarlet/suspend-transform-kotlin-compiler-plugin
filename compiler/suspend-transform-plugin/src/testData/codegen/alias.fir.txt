@@ -5,12 +5,22 @@ FILE: Main.kt
             super<R|kotlin/Any|>()
         }
 
-        @R|love/forte/plugin/suspendtrans/annotation/JvmBlocking|() @R|love/forte/plugin/suspendtrans/annotation/JvmAsync|() @R|love/forte/plugin/suspendtrans/annotation/TargetMarker|(value = String(ZXJyb3JSZXByb2R1Y3Rpb25NeUNsYXNzbnVsbHtNb25leVZhbHVlPX0ga290bGluL0xvbmc=)) public final suspend fun errorReproduction(amount: R|{MoneyValue=} kotlin/Long|): R|kotlin/Unit| {
+        @R|love/forte/plugin/suspendtrans/annotation/JvmBlocking|() @R|love/forte/plugin/suspendtrans/annotation/JvmAsync|() @R|kotlin/jvm/JvmSynthetic|() public final suspend fun errorReproduction(amount: R|{MoneyValue=} kotlin/Long|): R|kotlin/Unit| {
             R|kotlin/io/println|(R|<local>/amount|)
         }
 
-        @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public final fun errorReproductionAsync(amount: R|{MoneyValue=} kotlin/Long|): R|java/util/concurrent/CompletableFuture<out kotlin/Unit>|
+        @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public final fun errorReproductionAsync(amount: R|{MoneyValue=} kotlin/Long|): R|java/util/concurrent/CompletableFuture<out kotlin/Unit>| {
+            ^errorReproductionAsync R|love/forte/plugin/suspendtrans/runtime/$runInAsync$|(suspend fun <anonymous>(): R|kotlin/Unit| <inline=Unknown>  {
+                ^ this@R|/MyClass|.R|/MyClass.errorReproduction|(R|<local>/amount|)
+            }
+            , (this@R|/MyClass| as? R|kotlinx/coroutines/CoroutineScope|))
+        }
 
-        @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public final fun errorReproductionBlocking(amount: R|{MoneyValue=} kotlin/Long|): R|kotlin/Unit|
+        @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public final fun errorReproductionBlocking(amount: R|{MoneyValue=} kotlin/Long|): R|kotlin/Unit| {
+            ^errorReproductionBlocking R|love/forte/plugin/suspendtrans/runtime/$runInBlocking$|(suspend fun <anonymous>(): R|kotlin/Unit| <inline=Unknown>  {
+                ^ this@R|/MyClass|.R|/MyClass.errorReproduction|(R|<local>/amount|)
+            }
+            )
+        }
 
     }

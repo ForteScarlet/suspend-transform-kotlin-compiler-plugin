@@ -1,0 +1,25 @@
+FILE: Main.kt
+    public abstract class MyClass : R|kotlin/Any| {
+        public constructor(): R|MyClass| {
+            super<R|kotlin/Any|>()
+        }
+
+        @R|love/forte/plugin/suspendtrans/annotation/JvmBlocking|() @R|love/forte/plugin/suspendtrans/annotation/JvmAsync|() @R|kotlin/jvm/JvmSynthetic|() public open suspend fun deleteAll(option: R|kotlin/Int|): R|kotlin/Int| {
+            ^deleteAll Int(1)
+        }
+
+        @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public open fun deleteAllAsync(option: R|kotlin/Int|): R|java/util/concurrent/CompletableFuture<out kotlin/Int>| {
+            ^deleteAllAsync R|love/forte/plugin/suspendtrans/runtime/$runInAsync$|(suspend fun <anonymous>(): R|kotlin/Int| <inline=Unknown>  {
+                ^ this@R|/MyClass|.R|/MyClass.deleteAll|(R|<local>/option|)
+            }
+            , (this@R|/MyClass| as? R|kotlinx/coroutines/CoroutineScope|))
+        }
+
+        @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public open fun deleteAllBlocking(option: R|kotlin/Int|): R|kotlin/Int| {
+            ^deleteAllBlocking R|love/forte/plugin/suspendtrans/runtime/$runInBlocking$|(suspend fun <anonymous>(): R|kotlin/Int| <inline=Unknown>  {
+                ^ this@R|/MyClass|.R|/MyClass.deleteAll|(R|<local>/option|)
+            }
+            )
+        }
+
+    }

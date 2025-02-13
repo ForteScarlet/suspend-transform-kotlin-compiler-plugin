@@ -19,7 +19,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath("love.forte.plugin.suspend-transform:suspend-transform-plugin-gradle:2.1.0-0.9.4")
+        classpath("love.forte.plugin.suspend-transform:suspend-transform-plugin-gradle:2.1.0-0.11.0")
     }
 }
 

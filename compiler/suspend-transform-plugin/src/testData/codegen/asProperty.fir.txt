@@ -4,25 +4,45 @@ FILE: Main.kt
             super<R|kotlin/Any|>()
         }
 
-        @R|love/forte/plugin/suspendtrans/annotation/JvmBlocking|(asProperty = Boolean(true), suffix = String()) @R|love/forte/plugin/suspendtrans/annotation/JvmAsync|(asProperty = Boolean(true)) @R|love/forte/plugin/suspendtrans/annotation/TargetMarker|(value = String(cHJvcFByb3BGb29udWxs)) public final suspend fun prop(): R|kotlin/String| {
+        @R|love/forte/plugin/suspendtrans/annotation/JvmBlocking|(asProperty = Boolean(true), suffix = String()) @R|love/forte/plugin/suspendtrans/annotation/JvmAsync|(asProperty = Boolean(true)) @R|kotlin/jvm/JvmSynthetic|() public final suspend fun prop(): R|kotlin/String| {
             ^prop String()
         }
 
         @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public final val prop: R|kotlin/String|
-            @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public get(): R|kotlin/String|
+            @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public get(): R|kotlin/String| {
+                ^ R|love/forte/plugin/suspendtrans/runtime/$runInBlocking$|(suspend fun <anonymous>(): R|kotlin/String| <inline=Unknown>  {
+                    ^ this@R|/PropFoo|.R|/PropFoo.prop|()
+                }
+                )
+            }
 
         @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public final val propAsync: R|java/util/concurrent/CompletableFuture<out kotlin/String>|
-            @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public get(): R|kotlin/String|
+            @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public get(): R|java/util/concurrent/CompletableFuture<out kotlin/String>| {
+                ^ R|love/forte/plugin/suspendtrans/runtime/$runInAsync$|(suspend fun <anonymous>(): R|kotlin/String| <inline=Unknown>  {
+                    ^ this@R|/PropFoo|.R|/PropFoo.prop|()
+                }
+                , (this@R|/PropFoo| as? R|kotlinx/coroutines/CoroutineScope|))
+            }
 
     }
     public abstract interface IProp : R|kotlin/Any| {
-        @R|love/forte/plugin/suspendtrans/annotation/JvmBlocking|(asProperty = Boolean(true), suffix = String()) @R|love/forte/plugin/suspendtrans/annotation/JvmAsync|(asProperty = Boolean(true)) @R|love/forte/plugin/suspendtrans/annotation/TargetMarker|(value = String(cHJvcElQcm9wbnVsbA==)) public abstract suspend fun prop(): R|kotlin/String|
+        @R|love/forte/plugin/suspendtrans/annotation/JvmBlocking|(asProperty = Boolean(true), suffix = String()) @R|love/forte/plugin/suspendtrans/annotation/JvmAsync|(asProperty = Boolean(true)) @R|kotlin/jvm/JvmSynthetic|() public abstract suspend fun prop(): R|kotlin/String|
 
         @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public open val prop: R|kotlin/String|
-            @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public get(): R|kotlin/String|
+            @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public get(): R|kotlin/String| {
+                ^ R|love/forte/plugin/suspendtrans/runtime/$runInBlocking$|(suspend fun <anonymous>(): R|kotlin/String| <inline=Unknown>  {
+                    ^ this@R|/IProp|.R|/IProp.prop|()
+                }
+                )
+            }
 
         @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public open val propAsync: R|java/util/concurrent/CompletableFuture<out kotlin/String>|
-            @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public get(): R|kotlin/String|
+            @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public get(): R|java/util/concurrent/CompletableFuture<out kotlin/String>| {
+                ^ R|love/forte/plugin/suspendtrans/runtime/$runInAsync$|(suspend fun <anonymous>(): R|kotlin/String| <inline=Unknown>  {
+                    ^ this@R|/IProp|.R|/IProp.prop|()
+                }
+                , (this@R|/IProp| as? R|kotlinx/coroutines/CoroutineScope|))
+            }
 
     }
     public final class PropImpl : R|IProp| {
@@ -30,14 +50,24 @@ FILE: Main.kt
             super<R|kotlin/Any|>()
         }
 
-        @R|love/forte/plugin/suspendtrans/annotation/JvmBlocking|(asProperty = Boolean(true), suffix = String()) @R|love/forte/plugin/suspendtrans/annotation/JvmAsync|(asProperty = Boolean(true)) @R|love/forte/plugin/suspendtrans/annotation/TargetMarker|(value = String(cHJvcFByb3BJbXBsbnVsbA==)) public open override suspend fun prop(): R|kotlin/String| {
+        @R|love/forte/plugin/suspendtrans/annotation/JvmBlocking|(asProperty = Boolean(true), suffix = String()) @R|love/forte/plugin/suspendtrans/annotation/JvmAsync|(asProperty = Boolean(true)) @R|kotlin/jvm/JvmSynthetic|() public open override suspend fun prop(): R|kotlin/String| {
             ^prop String()
         }
 
         @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public open override val prop: R|kotlin/String|
-            @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public get(): R|kotlin/String|
+            @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public get(): R|kotlin/String| {
+                ^ R|love/forte/plugin/suspendtrans/runtime/$runInBlocking$|(suspend fun <anonymous>(): R|kotlin/String| <inline=Unknown>  {
+                    ^ this@R|/PropImpl|.R|/PropImpl.prop|()
+                }
+                )
+            }
 
         @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public open override val propAsync: R|java/util/concurrent/CompletableFuture<out kotlin/String>|
-            @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public get(): R|kotlin/String|
+            @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public get(): R|java/util/concurrent/CompletableFuture<out kotlin/String>| {
+                ^ R|love/forte/plugin/suspendtrans/runtime/$runInAsync$|(suspend fun <anonymous>(): R|kotlin/String| <inline=Unknown>  {
+                    ^ this@R|/PropImpl|.R|/PropImpl.prop|()
+                }
+                , (this@R|/PropImpl| as? R|kotlinx/coroutines/CoroutineScope|))
+            }
 
     }

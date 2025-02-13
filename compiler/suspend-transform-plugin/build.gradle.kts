@@ -17,6 +17,7 @@ dependencies {
     implementation(kotlin("compiler"))
     compileOnly(libs.kotlinx.coroutines.core)
     api(libs.kotlinx.serialization.json)
+    // TODO 改成二进制的，比如 protobuf
 
     testImplementation("junit:junit:4.13.2")
     testImplementation(kotlin("stdlib"))

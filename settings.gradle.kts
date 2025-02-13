@@ -27,6 +27,8 @@ include(":runtime:suspend-transform-runtime")
 
 include(":plugins:suspend-transform-plugin-gradle")
 
+include(":local-helper")
+
 //Samples
 // include(":tests:test-jvm")
 // include(":tests:test-js")

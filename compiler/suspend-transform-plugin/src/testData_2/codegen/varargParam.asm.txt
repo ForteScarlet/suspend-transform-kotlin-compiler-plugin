@@ -1,0 +1,47 @@
+final class MyClass$deleteAllAsync$1 : kotlin/coroutines/jvm/internal/SuspendLambda, kotlin/jvm/functions/Function1 {
+    final int $option
+
+    int label
+
+    final MyClass this$0
+
+    void <init>(MyClass $receiver, int $option, kotlin.coroutines.Continuation $completion)
+
+    public final kotlin.coroutines.Continuation create(kotlin.coroutines.Continuation $completion)
+
+    public final java.lang.Object invoke(kotlin.coroutines.Continuation p1)
+
+    public java.lang.Object invoke(java.lang.Object p1)
+
+    public final java.lang.Object invokeSuspend(java.lang.Object $result)
+}
+
+final class MyClass$deleteAllBlocking$1 : kotlin/coroutines/jvm/internal/SuspendLambda, kotlin/jvm/functions/Function1 {
+    final int $option
+
+    int label
+
+    final MyClass this$0
+
+    void <init>(MyClass $receiver, int $option, kotlin.coroutines.Continuation $completion)
+
+    public final kotlin.coroutines.Continuation create(kotlin.coroutines.Continuation $completion)
+
+    public final java.lang.Object invoke(kotlin.coroutines.Continuation p1)
+
+    public java.lang.Object invoke(java.lang.Object p1)
+
+    public final java.lang.Object invokeSuspend(java.lang.Object $result)
+}
+
+public abstract class MyClass : java/lang/Object {
+    public void <init>()
+
+    public java.lang.Object deleteAll(int option, kotlin.coroutines.Continuation $completion)
+
+    static java.lang.Object deleteAll$suspendImpl(MyClass $this, int option, kotlin.coroutines.Continuation $completion)
+
+    public java.util.concurrent.CompletableFuture deleteAllAsync(int option)
+
+    public int deleteAllBlocking(int option)
+}

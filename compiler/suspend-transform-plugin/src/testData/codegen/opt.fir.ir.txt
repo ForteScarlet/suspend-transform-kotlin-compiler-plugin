@@ -70,7 +70,7 @@ FILE fqName:<root> fileName:/Main.kt
       overridden:
         public open fun toString (): kotlin.String declared in kotlin.Any
       $this: VALUE_PARAMETER name:<this> type:kotlin.Any
-    FUN GENERATED[love.forte.plugin.suspendtrans.fir.SuspendTransformPluginKey] name:runAsync visibility:public modality:FINAL <> ($this:<root>.OptInTest) returnType:java.util.concurrent.CompletableFuture
+    FUN GENERATED[love.forte.plugin.suspendtrans.fir.SuspendTransformK2V3Key] name:runAsync visibility:public modality:FINAL <> ($this:<root>.OptInTest) returnType:java.util.concurrent.CompletableFuture
       annotations:
         Values(target = CLASS_REFERENCE 'CLASS CLASS name:OptInTest modality:FINAL visibility:public superTypes:[kotlin.Any]' type=kotlin.reflect.KClass<<root>.OptInTest>)
         Api4J
@@ -79,25 +79,27 @@ FILE fqName:<root> fileName:/Main.kt
         RETURN type=kotlin.Nothing from='public final fun runAsync (): java.util.concurrent.CompletableFuture declared in <root>.OptInTest'
           CALL 'public final fun $runInAsync$ <T> (block: kotlin.coroutines.SuspendFunction0<T of love.forte.plugin.suspendtrans.runtime.$runInAsync$>, scope: kotlinx.coroutines.CoroutineScope?): java.util.concurrent.CompletableFuture declared in love.forte.plugin.suspendtrans.runtime' type=java.util.concurrent.CompletableFuture origin=null
             <T>: <none>
-            block: FUN_EXPR type=kotlin.coroutines.SuspendFunction0<java.util.concurrent.CompletableFuture> origin=LAMBDA
-              FUN LOCAL_FUNCTION_FOR_LAMBDA name:<no name provided> visibility:local modality:FINAL <> () returnType:java.util.concurrent.CompletableFuture [suspend]
+            block: FUN_EXPR type=kotlin.coroutines.SuspendFunction0<kotlin.Int> origin=LAMBDA
+              FUN LOCAL_FUNCTION_FOR_LAMBDA name:<anonymous> visibility:local modality:FINAL <> () returnType:kotlin.Int [suspend]
                 BLOCK_BODY
-                  RETURN type=kotlin.Nothing from='local final fun <no name provided> (): java.util.concurrent.CompletableFuture declared in <root>.OptInTest.runAsync'
+                  RETURN type=kotlin.Nothing from='local final fun <anonymous> (): kotlin.Int declared in <root>.OptInTest.runAsync'
                     CALL 'public final fun run (): kotlin.Int declared in <root>.OptInTest' type=kotlin.Int origin=null
                       $this: GET_VAR '<this>: <root>.OptInTest declared in <root>.OptInTest.runAsync' type=<root>.OptInTest origin=null
-    FUN GENERATED[love.forte.plugin.suspendtrans.fir.SuspendTransformPluginKey] name:runBlocking visibility:public modality:FINAL <> ($this:<root>.OptInTest) returnType:kotlin.Int
+            scope: TYPE_OP type=kotlinx.coroutines.CoroutineScope? origin=SAFE_CAST typeOperand=kotlinx.coroutines.CoroutineScope
+              GET_VAR '<this>: <root>.OptInTest declared in <root>.OptInTest.runAsync' type=<root>.OptInTest origin=null
+    FUN GENERATED[love.forte.plugin.suspendtrans.fir.SuspendTransformK2V3Key] name:runBlocking visibility:public modality:FINAL <> ($this:<root>.OptInTest) returnType:kotlin.Int
       annotations:
         Values(target = CLASS_REFERENCE 'CLASS CLASS name:OptInTest modality:FINAL visibility:public superTypes:[kotlin.Any]' type=kotlin.reflect.KClass<<root>.OptInTest>)
         Api4J
       $this: VALUE_PARAMETER name:<this> type:<root>.OptInTest
       BLOCK_BODY
         RETURN type=kotlin.Nothing from='public final fun runBlocking (): kotlin.Int declared in <root>.OptInTest'
-          CALL 'public final fun $runInBlocking$ <T> (block: kotlin.coroutines.SuspendFunction0<T of love.forte.plugin.suspendtrans.runtime.$runInBlocking$>): T of love.forte.plugin.suspendtrans.runtime.$runInBlocking$ declared in love.forte.plugin.suspendtrans.runtime' type=T of love.forte.plugin.suspendtrans.runtime.$runInBlocking$ origin=null
+          CALL 'public final fun $runInBlocking$ <T> (block: kotlin.coroutines.SuspendFunction0<T of love.forte.plugin.suspendtrans.runtime.$runInBlocking$>): T of love.forte.plugin.suspendtrans.runtime.$runInBlocking$ declared in love.forte.plugin.suspendtrans.runtime' type=kotlin.Int origin=null
             <T>: <none>
             block: FUN_EXPR type=kotlin.coroutines.SuspendFunction0<kotlin.Int> origin=LAMBDA
-              FUN LOCAL_FUNCTION_FOR_LAMBDA name:<no name provided> visibility:local modality:FINAL <> () returnType:kotlin.Int [suspend]
+              FUN LOCAL_FUNCTION_FOR_LAMBDA name:<anonymous> visibility:local modality:FINAL <> () returnType:kotlin.Int [suspend]
                 BLOCK_BODY
-                  RETURN type=kotlin.Nothing from='local final fun <no name provided> (): kotlin.Int declared in <root>.OptInTest.runBlocking'
+                  RETURN type=kotlin.Nothing from='local final fun <anonymous> (): kotlin.Int declared in <root>.OptInTest.runBlocking'
                     CALL 'public final fun run (): kotlin.Int declared in <root>.OptInTest' type=kotlin.Int origin=null
                       $this: GET_VAR '<this>: <root>.OptInTest declared in <root>.OptInTest.runBlocking' type=<root>.OptInTest origin=null
     FUN name:run visibility:public modality:FINAL <> ($this:<root>.OptInTest) returnType:kotlin.Int [suspend]
@@ -106,7 +108,6 @@ FILE fqName:<root> fileName:/Main.kt
         Values(target = CLASS_REFERENCE 'CLASS CLASS name:OptInTest modality:FINAL visibility:public superTypes:[kotlin.Any]' type=kotlin.reflect.KClass<<root>.OptInTest>)
         JvmBlocking(baseName = <null>, suffix = <null>, asProperty = <null>)
         JvmAsync(baseName = <null>, suffix = <null>, asProperty = <null>)
-        TargetMarker(value = "cnVuT3B0SW5UZXN0bnVsbA==")
         JvmSynthetic
       $this: VALUE_PARAMETER name:<this> type:<root>.OptInTest
       BLOCK_BODY

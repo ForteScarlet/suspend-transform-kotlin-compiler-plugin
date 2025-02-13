@@ -18,17 +18,37 @@ FILE: Main.kt
 
     }
     public abstract interface Foo<out T : R|Bar|> : R|kotlin/Any| {
-        @R|love/forte/plugin/suspendtrans/annotation/JvmBlocking|() @R|love/forte/plugin/suspendtrans/annotation/JvmAsync|() @R|love/forte/plugin/suspendtrans/annotation/TargetMarker|(value = String(dmFsdWVGb288VD5udWxs)) public abstract suspend fun value(): R|T|
+        @R|love/forte/plugin/suspendtrans/annotation/JvmBlocking|() @R|love/forte/plugin/suspendtrans/annotation/JvmAsync|() @R|kotlin/jvm/JvmSynthetic|() public abstract suspend fun value(): R|T|
 
-        @R|love/forte/plugin/suspendtrans/annotation/JvmBlocking|() @R|love/forte/plugin/suspendtrans/annotation/JvmAsync|() @R|love/forte/plugin/suspendtrans/annotation/TargetMarker|(value = String(cnVuRm9vPFQ+bnVsbEFwaTxSPg==)) public abstract suspend fun <R : R|kotlin/Any|> run(api: R|Api<R>|): R|R|
+        @R|love/forte/plugin/suspendtrans/annotation/JvmBlocking|() @R|love/forte/plugin/suspendtrans/annotation/JvmAsync|() @R|kotlin/jvm/JvmSynthetic|() public abstract suspend fun <R : R|kotlin/Any|> run(api: R|Api<R>|): R|R|
 
-        @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public open fun valueAsync(): R|java/util/concurrent/CompletableFuture<out T>|
+        @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public open fun valueAsync(): R|java/util/concurrent/CompletableFuture<out T>| {
+            ^valueAsync R|love/forte/plugin/suspendtrans/runtime/$runInAsync$|(suspend fun <anonymous>(): R|T| <inline=Unknown>  {
+                ^ this@R|/Foo|.R|/Foo.value|()
+            }
+            , (this@R|/Foo| as? R|kotlinx/coroutines/CoroutineScope|))
+        }
 
-        @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public open fun valueBlocking(): R|T|
+        @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public open fun valueBlocking(): R|T| {
+            ^valueBlocking R|love/forte/plugin/suspendtrans/runtime/$runInBlocking$|(suspend fun <anonymous>(): R|T| <inline=Unknown>  {
+                ^ this@R|/Foo|.R|/Foo.value|()
+            }
+            )
+        }
 
-        @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public open fun <R : R|kotlin/Any|> runAsync(api: R|Api<R>|): R|java/util/concurrent/CompletableFuture<out R>|
+        @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public open fun <R : R|kotlin/Any|> runAsync(api: R|Api<R>|): R|java/util/concurrent/CompletableFuture<out R>| {
+            ^runAsync R|love/forte/plugin/suspendtrans/runtime/$runInAsync$|(suspend fun <anonymous>(): R|R| <inline=Unknown>  {
+                ^ this@R|/Foo|.R|/Foo.run|(R|<local>/api|)
+            }
+            , (this@R|/Foo| as? R|kotlinx/coroutines/CoroutineScope|))
+        }
 
-        @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public open fun <R : R|kotlin/Any|> runBlocking(api: R|Api<R>|): R|R|
+        @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public open fun <R : R|kotlin/Any|> runBlocking(api: R|Api<R>|): R|R| {
+            ^runBlocking R|love/forte/plugin/suspendtrans/runtime/$runInBlocking$|(suspend fun <anonymous>(): R|R| <inline=Unknown>  {
+                ^ this@R|/Foo|.R|/Foo.run|(R|<local>/api|)
+            }
+            )
+        }
 
     }
     public final class FooImpl : R|Foo<Tar>| {

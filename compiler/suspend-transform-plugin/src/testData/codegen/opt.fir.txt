@@ -23,12 +23,22 @@ FILE: Main.kt
             ^run0 Int(1)
         }
 
-        @R|kotlin/OptIn|(markerClass = vararg(<getClass>(Q|OneOptAnno|))) @R|Values|(target = <getClass>(Q|OptInTest|)) @R|love/forte/plugin/suspendtrans/annotation/JvmBlocking|() @R|love/forte/plugin/suspendtrans/annotation/JvmAsync|() @R|love/forte/plugin/suspendtrans/annotation/TargetMarker|(value = String(cnVuT3B0SW5UZXN0bnVsbA==)) public final suspend fun run(): R|kotlin/Int| {
+        @R|kotlin/OptIn|(markerClass = vararg(<getClass>(Q|OneOptAnno|))) @R|Values|(target = <getClass>(Q|OptInTest|)) @R|love/forte/plugin/suspendtrans/annotation/JvmBlocking|() @R|love/forte/plugin/suspendtrans/annotation/JvmAsync|() @R|kotlin/jvm/JvmSynthetic|() public final suspend fun run(): R|kotlin/Int| {
             ^run this@R|/OptInTest|.R|/OptInTest.run0|()
         }
 
-        @R|Values|(target = <getClass>(Q|OptInTest|)) @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public final fun runAsync(): R|java/util/concurrent/CompletableFuture<out kotlin/Int>|
+        @R|Values|(target = <getClass>(Q|OptInTest|)) @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public final fun runAsync(): R|java/util/concurrent/CompletableFuture<out kotlin/Int>| {
+            ^runAsync R|love/forte/plugin/suspendtrans/runtime/$runInAsync$|(suspend fun <anonymous>(): R|kotlin/Int| <inline=Unknown>  {
+                ^ this@R|/OptInTest|.R|/OptInTest.run|()
+            }
+            , (this@R|/OptInTest| as? R|kotlinx/coroutines/CoroutineScope|))
+        }
 
-        @R|Values|(target = <getClass>(Q|OptInTest|)) @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public final fun runBlocking(): R|kotlin/Int|
+        @R|Values|(target = <getClass>(Q|OptInTest|)) @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public final fun runBlocking(): R|kotlin/Int| {
+            ^runBlocking R|love/forte/plugin/suspendtrans/runtime/$runInBlocking$|(suspend fun <anonymous>(): R|kotlin/Int| <inline=Unknown>  {
+                ^ this@R|/OptInTest|.R|/OptInTest.run|()
+            }
+            )
+        }
 
     }

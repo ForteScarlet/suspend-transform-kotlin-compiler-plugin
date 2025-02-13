@@ -1,0 +1,125 @@
+final class BasicBar$bar2Async$1 : kotlin/coroutines/jvm/internal/SuspendLambda, kotlin/jvm/functions/Function1 {
+    final int $i
+
+    int label
+
+    final BasicBar this$0
+
+    void <init>(BasicBar $receiver, int $i, kotlin.coroutines.Continuation $completion)
+
+    public final kotlin.coroutines.Continuation create(kotlin.coroutines.Continuation $completion)
+
+    public final java.lang.Object invoke(kotlin.coroutines.Continuation p1)
+
+    public java.lang.Object invoke(java.lang.Object p1)
+
+    public final java.lang.Object invokeSuspend(java.lang.Object $result)
+}
+
+final class BasicBar$barAsync$1 : kotlin/coroutines/jvm/internal/SuspendLambda, kotlin/jvm/functions/Function1 {
+    int label
+
+    final BasicBar this$0
+
+    void <init>(BasicBar $receiver, kotlin.coroutines.Continuation $completion)
+
+    public final kotlin.coroutines.Continuation create(kotlin.coroutines.Continuation $completion)
+
+    public final java.lang.Object invoke(kotlin.coroutines.Continuation p1)
+
+    public java.lang.Object invoke(java.lang.Object p1)
+
+    public final java.lang.Object invokeSuspend(java.lang.Object $result)
+}
+
+public final class BasicBar : java/lang/Object {
+    public void <init>()
+
+    public final java.lang.Object bar(kotlin.coroutines.Continuation $completion)
+
+    public final java.lang.Object bar2(int i, kotlin.coroutines.Continuation $completion)
+
+    public final java.util.concurrent.CompletableFuture bar2Async(int i)
+
+    public final java.util.concurrent.CompletableFuture barAsync()
+}
+
+final class BasicFoo$fooAsync$1 : kotlin/coroutines/jvm/internal/SuspendLambda, kotlin/jvm/functions/Function1 {
+    int label
+
+    final BasicFoo this$0
+
+    void <init>(BasicFoo $receiver, kotlin.coroutines.Continuation $completion)
+
+    public final kotlin.coroutines.Continuation create(kotlin.coroutines.Continuation $completion)
+
+    public final java.lang.Object invoke(kotlin.coroutines.Continuation p1)
+
+    public java.lang.Object invoke(java.lang.Object p1)
+
+    public final java.lang.Object invokeSuspend(java.lang.Object $result)
+}
+
+public final class BasicFoo : java/lang/Object {
+    public void <init>()
+
+    public final java.lang.Object foo(kotlin.coroutines.Continuation $completion)
+
+    public final java.util.concurrent.CompletableFuture fooAsync()
+}
+
+public final class InterfaceBar$DefaultImpls : java/lang/Object {
+    public static java.util.concurrent.CompletableFuture bar2Async(InterfaceBar $this, int i)
+
+    public static java.util.concurrent.CompletableFuture barAsync(InterfaceBar $this)
+}
+
+final class InterfaceBar$bar2Async$1 : kotlin/coroutines/jvm/internal/SuspendLambda, kotlin/jvm/functions/Function1 {
+    final int $i
+
+    int label
+
+    final InterfaceBar this$0
+
+    void <init>(InterfaceBar $receiver, int $i, kotlin.coroutines.Continuation $completion)
+
+    public final kotlin.coroutines.Continuation create(kotlin.coroutines.Continuation $completion)
+
+    public final java.lang.Object invoke(kotlin.coroutines.Continuation p1)
+
+    public java.lang.Object invoke(java.lang.Object p1)
+
+    public final java.lang.Object invokeSuspend(java.lang.Object $result)
+}
+
+final class InterfaceBar$barAsync$1 : kotlin/coroutines/jvm/internal/SuspendLambda, kotlin/jvm/functions/Function1 {
+    int label
+
+    final InterfaceBar this$0
+
+    void <init>(InterfaceBar $receiver, kotlin.coroutines.Continuation $completion)
+
+    public final kotlin.coroutines.Continuation create(kotlin.coroutines.Continuation $completion)
+
+    public final java.lang.Object invoke(kotlin.coroutines.Continuation p1)
+
+    public java.lang.Object invoke(java.lang.Object p1)
+
+    public final java.lang.Object invokeSuspend(java.lang.Object $result)
+}
+
+public abstract interface InterfaceBar : java/lang/Object {
+    public abstract ResultValue asyncBase(int p0)
+
+    public abstract java.lang.Object bar(kotlin.coroutines.Continuation p0)
+
+    public abstract java.lang.Object bar2(int p0, kotlin.coroutines.Continuation p1)
+
+    public abstract java.util.concurrent.CompletableFuture bar2Async(int p0)
+
+    public abstract java.util.concurrent.CompletableFuture barAsync()
+}
+
+public final class ResultValue : java/lang/Object {
+    public void <init>()
+}

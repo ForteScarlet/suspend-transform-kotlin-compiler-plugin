@@ -4,11 +4,16 @@ FILE: Main.kt
             super<R|kotlin/Any|>()
         }
 
-        @R|love/forte/plugin/suspendtrans/annotation/JvmAsync|() @R|love/forte/plugin/suspendtrans/annotation/TargetMarker|(value = String(Zm9vQmFzaWNGb29udWxs)) public final suspend fun foo(): R|kotlin/String| {
+        @R|love/forte/plugin/suspendtrans/annotation/JvmAsync|() @R|kotlin/jvm/JvmSynthetic|() public final suspend fun foo(): R|kotlin/String| {
             ^foo String(foo)
         }
 
-        @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public final fun fooAsync(): R|java/util/concurrent/CompletableFuture<out kotlin/String>|
+        @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public final fun fooAsync(): R|java/util/concurrent/CompletableFuture<out kotlin/String>| {
+            ^fooAsync R|love/forte/plugin/suspendtrans/runtime/$runInAsync$|(suspend fun <anonymous>(): R|kotlin/String| <inline=Unknown>  {
+                ^ this@R|/BasicFoo|.R|/BasicFoo.foo|()
+            }
+            , (this@R|/BasicFoo| as? R|kotlinx/coroutines/CoroutineScope|))
+        }
 
     }
     public final class BasicBar : R|kotlin/Any| {
@@ -16,29 +21,49 @@ FILE: Main.kt
             super<R|kotlin/Any|>()
         }
 
-        @R|love/forte/plugin/suspendtrans/annotation/JvmAsync|() @R|love/forte/plugin/suspendtrans/annotation/TargetMarker|(value = String(YmFyQmFzaWNCYXJudWxs)) public final suspend fun bar(): R|kotlin/String| {
+        @R|love/forte/plugin/suspendtrans/annotation/JvmAsync|() @R|kotlin/jvm/JvmSynthetic|() public final suspend fun bar(): R|kotlin/String| {
             ^bar String(bar)
         }
 
-        @R|love/forte/plugin/suspendtrans/annotation/JvmAsync|() @R|love/forte/plugin/suspendtrans/annotation/TargetMarker|(value = String(YmFyMkJhc2ljQmFybnVsbGtvdGxpbi9JbnQ=)) public final suspend fun bar2(i: R|kotlin/Int|): R|kotlin/String| {
+        @R|love/forte/plugin/suspendtrans/annotation/JvmAsync|() @R|kotlin/jvm/JvmSynthetic|() public final suspend fun bar2(i: R|kotlin/Int|): R|kotlin/String| {
             ^bar2 String(bar2)
         }
 
-        @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public final fun bar2Async(i: R|kotlin/Int|): R|java/util/concurrent/CompletableFuture<out kotlin/String>|
+        @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public final fun bar2Async(i: R|kotlin/Int|): R|java/util/concurrent/CompletableFuture<out kotlin/String>| {
+            ^bar2Async R|love/forte/plugin/suspendtrans/runtime/$runInAsync$|(suspend fun <anonymous>(): R|kotlin/String| <inline=Unknown>  {
+                ^ this@R|/BasicBar|.R|/BasicBar.bar2|(R|<local>/i|)
+            }
+            , (this@R|/BasicBar| as? R|kotlinx/coroutines/CoroutineScope|))
+        }
 
-        @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public final fun barAsync(): R|java/util/concurrent/CompletableFuture<out kotlin/String>|
+        @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public final fun barAsync(): R|java/util/concurrent/CompletableFuture<out kotlin/String>| {
+            ^barAsync R|love/forte/plugin/suspendtrans/runtime/$runInAsync$|(suspend fun <anonymous>(): R|kotlin/String| <inline=Unknown>  {
+                ^ this@R|/BasicBar|.R|/BasicBar.bar|()
+            }
+            , (this@R|/BasicBar| as? R|kotlinx/coroutines/CoroutineScope|))
+        }
 
     }
     public abstract interface InterfaceBar : R|kotlin/Any| {
-        @R|love/forte/plugin/suspendtrans/annotation/JvmAsync|() @R|love/forte/plugin/suspendtrans/annotation/TargetMarker|(value = String(YmFySW50ZXJmYWNlQmFybnVsbA==)) public abstract suspend fun bar(): R|kotlin/String|
+        @R|love/forte/plugin/suspendtrans/annotation/JvmAsync|() @R|kotlin/jvm/JvmSynthetic|() public abstract suspend fun bar(): R|kotlin/String|
 
-        @R|love/forte/plugin/suspendtrans/annotation/JvmAsync|() @R|love/forte/plugin/suspendtrans/annotation/TargetMarker|(value = String(YmFyMkludGVyZmFjZUJhcm51bGxrb3RsaW4vSW50)) public abstract suspend fun bar2(i: R|kotlin/Int|): R|kotlin/String|
+        @R|love/forte/plugin/suspendtrans/annotation/JvmAsync|() @R|kotlin/jvm/JvmSynthetic|() public abstract suspend fun bar2(i: R|kotlin/Int|): R|kotlin/String|
 
         public abstract fun asyncBase(i: R|kotlin/Int|): R|ResultValue<out kotlin/String>|
 
-        @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public open fun bar2Async(i: R|kotlin/Int|): R|java/util/concurrent/CompletableFuture<out kotlin/String>|
+        @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public open fun bar2Async(i: R|kotlin/Int|): R|java/util/concurrent/CompletableFuture<out kotlin/String>| {
+            ^bar2Async R|love/forte/plugin/suspendtrans/runtime/$runInAsync$|(suspend fun <anonymous>(): R|kotlin/String| <inline=Unknown>  {
+                ^ this@R|/InterfaceBar|.R|/InterfaceBar.bar2|(R|<local>/i|)
+            }
+            , (this@R|/InterfaceBar| as? R|kotlinx/coroutines/CoroutineScope|))
+        }
 
-        @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public open fun barAsync(): R|java/util/concurrent/CompletableFuture<out kotlin/String>|
+        @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public open fun barAsync(): R|java/util/concurrent/CompletableFuture<out kotlin/String>| {
+            ^barAsync R|love/forte/plugin/suspendtrans/runtime/$runInAsync$|(suspend fun <anonymous>(): R|kotlin/String| <inline=Unknown>  {
+                ^ this@R|/InterfaceBar|.R|/InterfaceBar.bar|()
+            }
+            , (this@R|/InterfaceBar| as? R|kotlinx/coroutines/CoroutineScope|))
+        }
 
     }
     public final class ResultValue<T> : R|kotlin/Any| {

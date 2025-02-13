@@ -18,7 +18,7 @@ FILE fqName:<root> fileName:/Main.kt
       overridden:
         public open fun toString (): kotlin.String declared in kotlin.Any
       $this: VALUE_PARAMETER name:<this> type:kotlin.Any
-    FUN GENERATED[love.forte.plugin.suspendtrans.fir.SuspendTransformPluginKey] name:bar2Async visibility:public modality:FINAL <> ($this:<root>.BasicBar, i:kotlin.Int) returnType:java.util.concurrent.CompletableFuture
+    FUN GENERATED[love.forte.plugin.suspendtrans.fir.SuspendTransformK2V3Key] name:bar2Async visibility:public modality:FINAL <> ($this:<root>.BasicBar, i:kotlin.Int) returnType:java.util.concurrent.CompletableFuture
       annotations:
         Api4J
       $this: VALUE_PARAMETER name:<this> type:<root>.BasicBar
@@ -27,14 +27,16 @@ FILE fqName:<root> fileName:/Main.kt
         RETURN type=kotlin.Nothing from='public final fun bar2Async (i: kotlin.Int): java.util.concurrent.CompletableFuture declared in <root>.BasicBar'
           CALL 'public final fun $runInAsync$ <T> (block: kotlin.coroutines.SuspendFunction0<T of love.forte.plugin.suspendtrans.runtime.$runInAsync$>, scope: kotlinx.coroutines.CoroutineScope?): java.util.concurrent.CompletableFuture declared in love.forte.plugin.suspendtrans.runtime' type=java.util.concurrent.CompletableFuture origin=null
             <T>: <none>
-            block: FUN_EXPR type=kotlin.coroutines.SuspendFunction0<java.util.concurrent.CompletableFuture> origin=LAMBDA
-              FUN LOCAL_FUNCTION_FOR_LAMBDA name:<no name provided> visibility:local modality:FINAL <> () returnType:java.util.concurrent.CompletableFuture [suspend]
+            block: FUN_EXPR type=kotlin.coroutines.SuspendFunction0<kotlin.String> origin=LAMBDA
+              FUN LOCAL_FUNCTION_FOR_LAMBDA name:<anonymous> visibility:local modality:FINAL <> () returnType:kotlin.String [suspend]
                 BLOCK_BODY
-                  RETURN type=kotlin.Nothing from='local final fun <no name provided> (): java.util.concurrent.CompletableFuture declared in <root>.BasicBar.bar2Async'
+                  RETURN type=kotlin.Nothing from='local final fun <anonymous> (): kotlin.String declared in <root>.BasicBar.bar2Async'
                     CALL 'public final fun bar2 (i: kotlin.Int): kotlin.String declared in <root>.BasicBar' type=kotlin.String origin=null
                       $this: GET_VAR '<this>: <root>.BasicBar declared in <root>.BasicBar.bar2Async' type=<root>.BasicBar origin=null
                       i: GET_VAR 'i: kotlin.Int declared in <root>.BasicBar.bar2Async' type=kotlin.Int origin=null
-    FUN GENERATED[love.forte.plugin.suspendtrans.fir.SuspendTransformPluginKey] name:barAsync visibility:public modality:FINAL <> ($this:<root>.BasicBar) returnType:java.util.concurrent.CompletableFuture
+            scope: TYPE_OP type=kotlinx.coroutines.CoroutineScope? origin=SAFE_CAST typeOperand=kotlinx.coroutines.CoroutineScope
+              GET_VAR '<this>: <root>.BasicBar declared in <root>.BasicBar.bar2Async' type=<root>.BasicBar origin=null
+    FUN GENERATED[love.forte.plugin.suspendtrans.fir.SuspendTransformK2V3Key] name:barAsync visibility:public modality:FINAL <> ($this:<root>.BasicBar) returnType:java.util.concurrent.CompletableFuture
       annotations:
         Api4J
       $this: VALUE_PARAMETER name:<this> type:<root>.BasicBar
@@ -42,16 +44,17 @@ FILE fqName:<root> fileName:/Main.kt
         RETURN type=kotlin.Nothing from='public final fun barAsync (): java.util.concurrent.CompletableFuture declared in <root>.BasicBar'
           CALL 'public final fun $runInAsync$ <T> (block: kotlin.coroutines.SuspendFunction0<T of love.forte.plugin.suspendtrans.runtime.$runInAsync$>, scope: kotlinx.coroutines.CoroutineScope?): java.util.concurrent.CompletableFuture declared in love.forte.plugin.suspendtrans.runtime' type=java.util.concurrent.CompletableFuture origin=null
             <T>: <none>
-            block: FUN_EXPR type=kotlin.coroutines.SuspendFunction0<java.util.concurrent.CompletableFuture> origin=LAMBDA
-              FUN LOCAL_FUNCTION_FOR_LAMBDA name:<no name provided> visibility:local modality:FINAL <> () returnType:java.util.concurrent.CompletableFuture [suspend]
+            block: FUN_EXPR type=kotlin.coroutines.SuspendFunction0<kotlin.String> origin=LAMBDA
+              FUN LOCAL_FUNCTION_FOR_LAMBDA name:<anonymous> visibility:local modality:FINAL <> () returnType:kotlin.String [suspend]
                 BLOCK_BODY
-                  RETURN type=kotlin.Nothing from='local final fun <no name provided> (): java.util.concurrent.CompletableFuture declared in <root>.BasicBar.barAsync'
+                  RETURN type=kotlin.Nothing from='local final fun <anonymous> (): kotlin.String declared in <root>.BasicBar.barAsync'
                     CALL 'public final fun bar (): kotlin.String declared in <root>.BasicBar' type=kotlin.String origin=null
                       $this: GET_VAR '<this>: <root>.BasicBar declared in <root>.BasicBar.barAsync' type=<root>.BasicBar origin=null
+            scope: TYPE_OP type=kotlinx.coroutines.CoroutineScope? origin=SAFE_CAST typeOperand=kotlinx.coroutines.CoroutineScope
+              GET_VAR '<this>: <root>.BasicBar declared in <root>.BasicBar.barAsync' type=<root>.BasicBar origin=null
     FUN name:bar visibility:public modality:FINAL <> ($this:<root>.BasicBar) returnType:kotlin.String [suspend]
       annotations:
         JvmAsync(baseName = <null>, suffix = <null>, asProperty = <null>)
-        TargetMarker(value = "YmFyQmFzaWNCYXJudWxs")
         JvmSynthetic
       $this: VALUE_PARAMETER name:<this> type:<root>.BasicBar
       BLOCK_BODY
@@ -60,7 +63,6 @@ FILE fqName:<root> fileName:/Main.kt
     FUN name:bar2 visibility:public modality:FINAL <> ($this:<root>.BasicBar, i:kotlin.Int) returnType:kotlin.String [suspend]
       annotations:
         JvmAsync(baseName = <null>, suffix = <null>, asProperty = <null>)
-        TargetMarker(value = "YmFyMkJhc2ljQmFybnVsbGtvdGxpbi9JbnQ=")
         JvmSynthetic
       $this: VALUE_PARAMETER name:<this> type:<root>.BasicBar
       VALUE_PARAMETER name:i index:0 type:kotlin.Int
@@ -86,7 +88,7 @@ FILE fqName:<root> fileName:/Main.kt
       overridden:
         public open fun toString (): kotlin.String declared in kotlin.Any
       $this: VALUE_PARAMETER name:<this> type:kotlin.Any
-    FUN GENERATED[love.forte.plugin.suspendtrans.fir.SuspendTransformPluginKey] name:fooAsync visibility:public modality:FINAL <> ($this:<root>.BasicFoo) returnType:java.util.concurrent.CompletableFuture
+    FUN GENERATED[love.forte.plugin.suspendtrans.fir.SuspendTransformK2V3Key] name:fooAsync visibility:public modality:FINAL <> ($this:<root>.BasicFoo) returnType:java.util.concurrent.CompletableFuture
       annotations:
         Api4J
       $this: VALUE_PARAMETER name:<this> type:<root>.BasicFoo
@@ -94,16 +96,17 @@ FILE fqName:<root> fileName:/Main.kt
         RETURN type=kotlin.Nothing from='public final fun fooAsync (): java.util.concurrent.CompletableFuture declared in <root>.BasicFoo'
           CALL 'public final fun $runInAsync$ <T> (block: kotlin.coroutines.SuspendFunction0<T of love.forte.plugin.suspendtrans.runtime.$runInAsync$>, scope: kotlinx.coroutines.CoroutineScope?): java.util.concurrent.CompletableFuture declared in love.forte.plugin.suspendtrans.runtime' type=java.util.concurrent.CompletableFuture origin=null
             <T>: <none>
-            block: FUN_EXPR type=kotlin.coroutines.SuspendFunction0<java.util.concurrent.CompletableFuture> origin=LAMBDA
-              FUN LOCAL_FUNCTION_FOR_LAMBDA name:<no name provided> visibility:local modality:FINAL <> () returnType:java.util.concurrent.CompletableFuture [suspend]
+            block: FUN_EXPR type=kotlin.coroutines.SuspendFunction0<kotlin.String> origin=LAMBDA
+              FUN LOCAL_FUNCTION_FOR_LAMBDA name:<anonymous> visibility:local modality:FINAL <> () returnType:kotlin.String [suspend]
                 BLOCK_BODY
-                  RETURN type=kotlin.Nothing from='local final fun <no name provided> (): java.util.concurrent.CompletableFuture declared in <root>.BasicFoo.fooAsync'
+                  RETURN type=kotlin.Nothing from='local final fun <anonymous> (): kotlin.String declared in <root>.BasicFoo.fooAsync'
                     CALL 'public final fun foo (): kotlin.String declared in <root>.BasicFoo' type=kotlin.String origin=null
                       $this: GET_VAR '<this>: <root>.BasicFoo declared in <root>.BasicFoo.fooAsync' type=<root>.BasicFoo origin=null
+            scope: TYPE_OP type=kotlinx.coroutines.CoroutineScope? origin=SAFE_CAST typeOperand=kotlinx.coroutines.CoroutineScope
+              GET_VAR '<this>: <root>.BasicFoo declared in <root>.BasicFoo.fooAsync' type=<root>.BasicFoo origin=null
     FUN name:foo visibility:public modality:FINAL <> ($this:<root>.BasicFoo) returnType:kotlin.String [suspend]
       annotations:
         JvmAsync(baseName = <null>, suffix = <null>, asProperty = <null>)
-        TargetMarker(value = "Zm9vQmFzaWNGb29udWxs")
         JvmSynthetic
       $this: VALUE_PARAMETER name:<this> type:<root>.BasicFoo
       BLOCK_BODY
@@ -144,7 +147,7 @@ FILE fqName:<root> fileName:/Main.kt
       overridden:
         public open fun toString (): kotlin.String declared in kotlin.Any
       $this: VALUE_PARAMETER name:<this> type:kotlin.Any
-    FUN GENERATED[love.forte.plugin.suspendtrans.fir.SuspendTransformPluginKey] name:bar2Async visibility:public modality:OPEN <> ($this:<root>.InterfaceBar, i:kotlin.Int) returnType:java.util.concurrent.CompletableFuture
+    FUN GENERATED[love.forte.plugin.suspendtrans.fir.SuspendTransformK2V3Key] name:bar2Async visibility:public modality:OPEN <> ($this:<root>.InterfaceBar, i:kotlin.Int) returnType:java.util.concurrent.CompletableFuture
       annotations:
         Api4J
       $this: VALUE_PARAMETER name:<this> type:<root>.InterfaceBar
@@ -153,14 +156,16 @@ FILE fqName:<root> fileName:/Main.kt
         RETURN type=kotlin.Nothing from='public open fun bar2Async (i: kotlin.Int): java.util.concurrent.CompletableFuture declared in <root>.InterfaceBar'
           CALL 'public final fun $runInAsync$ <T> (block: kotlin.coroutines.SuspendFunction0<T of love.forte.plugin.suspendtrans.runtime.$runInAsync$>, scope: kotlinx.coroutines.CoroutineScope?): java.util.concurrent.CompletableFuture declared in love.forte.plugin.suspendtrans.runtime' type=java.util.concurrent.CompletableFuture origin=null
             <T>: <none>
-            block: FUN_EXPR type=kotlin.coroutines.SuspendFunction0<java.util.concurrent.CompletableFuture> origin=LAMBDA
-              FUN LOCAL_FUNCTION_FOR_LAMBDA name:<no name provided> visibility:local modality:FINAL <> () returnType:java.util.concurrent.CompletableFuture [suspend]
+            block: FUN_EXPR type=kotlin.coroutines.SuspendFunction0<kotlin.String> origin=LAMBDA
+              FUN LOCAL_FUNCTION_FOR_LAMBDA name:<anonymous> visibility:local modality:FINAL <> () returnType:kotlin.String [suspend]
                 BLOCK_BODY
-                  RETURN type=kotlin.Nothing from='local final fun <no name provided> (): java.util.concurrent.CompletableFuture declared in <root>.InterfaceBar.bar2Async'
+                  RETURN type=kotlin.Nothing from='local final fun <anonymous> (): kotlin.String declared in <root>.InterfaceBar.bar2Async'
                     CALL 'public abstract fun bar2 (i: kotlin.Int): kotlin.String declared in <root>.InterfaceBar' type=kotlin.String origin=null
                       $this: GET_VAR '<this>: <root>.InterfaceBar declared in <root>.InterfaceBar.bar2Async' type=<root>.InterfaceBar origin=null
                       i: GET_VAR 'i: kotlin.Int declared in <root>.InterfaceBar.bar2Async' type=kotlin.Int origin=null
-    FUN GENERATED[love.forte.plugin.suspendtrans.fir.SuspendTransformPluginKey] name:barAsync visibility:public modality:OPEN <> ($this:<root>.InterfaceBar) returnType:java.util.concurrent.CompletableFuture
+            scope: TYPE_OP type=kotlinx.coroutines.CoroutineScope? origin=SAFE_CAST typeOperand=kotlinx.coroutines.CoroutineScope
+              GET_VAR '<this>: <root>.InterfaceBar declared in <root>.InterfaceBar.bar2Async' type=<root>.InterfaceBar origin=null
+    FUN GENERATED[love.forte.plugin.suspendtrans.fir.SuspendTransformK2V3Key] name:barAsync visibility:public modality:OPEN <> ($this:<root>.InterfaceBar) returnType:java.util.concurrent.CompletableFuture
       annotations:
         Api4J
       $this: VALUE_PARAMETER name:<this> type:<root>.InterfaceBar
@@ -168,25 +173,25 @@ FILE fqName:<root> fileName:/Main.kt
         RETURN type=kotlin.Nothing from='public open fun barAsync (): java.util.concurrent.CompletableFuture declared in <root>.InterfaceBar'
           CALL 'public final fun $runInAsync$ <T> (block: kotlin.coroutines.SuspendFunction0<T of love.forte.plugin.suspendtrans.runtime.$runInAsync$>, scope: kotlinx.coroutines.CoroutineScope?): java.util.concurrent.CompletableFuture declared in love.forte.plugin.suspendtrans.runtime' type=java.util.concurrent.CompletableFuture origin=null
             <T>: <none>
-            block: FUN_EXPR type=kotlin.coroutines.SuspendFunction0<java.util.concurrent.CompletableFuture> origin=LAMBDA
-              FUN LOCAL_FUNCTION_FOR_LAMBDA name:<no name provided> visibility:local modality:FINAL <> () returnType:java.util.concurrent.CompletableFuture [suspend]
+            block: FUN_EXPR type=kotlin.coroutines.SuspendFunction0<kotlin.String> origin=LAMBDA
+              FUN LOCAL_FUNCTION_FOR_LAMBDA name:<anonymous> visibility:local modality:FINAL <> () returnType:kotlin.String [suspend]
                 BLOCK_BODY
-                  RETURN type=kotlin.Nothing from='local final fun <no name provided> (): java.util.concurrent.CompletableFuture declared in <root>.InterfaceBar.barAsync'
+                  RETURN type=kotlin.Nothing from='local final fun <anonymous> (): kotlin.String declared in <root>.InterfaceBar.barAsync'
                     CALL 'public abstract fun bar (): kotlin.String declared in <root>.InterfaceBar' type=kotlin.String origin=null
                       $this: GET_VAR '<this>: <root>.InterfaceBar declared in <root>.InterfaceBar.barAsync' type=<root>.InterfaceBar origin=null
+            scope: TYPE_OP type=kotlinx.coroutines.CoroutineScope? origin=SAFE_CAST typeOperand=kotlinx.coroutines.CoroutineScope
+              GET_VAR '<this>: <root>.InterfaceBar declared in <root>.InterfaceBar.barAsync' type=<root>.InterfaceBar origin=null
     FUN name:asyncBase visibility:public modality:ABSTRACT <> ($this:<root>.InterfaceBar, i:kotlin.Int) returnType:<root>.ResultValue<out kotlin.String>
       $this: VALUE_PARAMETER name:<this> type:<root>.InterfaceBar
       VALUE_PARAMETER name:i index:0 type:kotlin.Int
     FUN name:bar visibility:public modality:ABSTRACT <> ($this:<root>.InterfaceBar) returnType:kotlin.String [suspend]
       annotations:
         JvmAsync(baseName = <null>, suffix = <null>, asProperty = <null>)
-        TargetMarker(value = "YmFySW50ZXJmYWNlQmFybnVsbA==")
         JvmSynthetic
       $this: VALUE_PARAMETER name:<this> type:<root>.InterfaceBar
     FUN name:bar2 visibility:public modality:ABSTRACT <> ($this:<root>.InterfaceBar, i:kotlin.Int) returnType:kotlin.String [suspend]
       annotations:
         JvmAsync(baseName = <null>, suffix = <null>, asProperty = <null>)
-        TargetMarker(value = "YmFyMkludGVyZmFjZUJhcm51bGxrb3RsaW4vSW50")
         JvmSynthetic
       $this: VALUE_PARAMETER name:<this> type:<root>.InterfaceBar
       VALUE_PARAMETER name:i index:0 type:kotlin.Int

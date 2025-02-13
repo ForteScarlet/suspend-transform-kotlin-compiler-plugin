@@ -1,0 +1,53 @@
+public abstract interface OneOptAnno : java/lang/Object, java/lang/annotation/Annotation {
+
+}
+
+final class OptInTest$runAsync$1 : kotlin/coroutines/jvm/internal/SuspendLambda, kotlin/jvm/functions/Function1 {
+    int label
+
+    final OptInTest this$0
+
+    void <init>(OptInTest $receiver, kotlin.coroutines.Continuation $completion)
+
+    public final kotlin.coroutines.Continuation create(kotlin.coroutines.Continuation $completion)
+
+    public final java.lang.Object invoke(kotlin.coroutines.Continuation p1)
+
+    public java.lang.Object invoke(java.lang.Object p1)
+
+    public final java.lang.Object invokeSuspend(java.lang.Object $result)
+}
+
+final class OptInTest$runBlocking$1 : kotlin/coroutines/jvm/internal/SuspendLambda, kotlin/jvm/functions/Function1 {
+    int label
+
+    final OptInTest this$0
+
+    void <init>(OptInTest $receiver, kotlin.coroutines.Continuation $completion)
+
+    public final kotlin.coroutines.Continuation create(kotlin.coroutines.Continuation $completion)
+
+    public final java.lang.Object invoke(kotlin.coroutines.Continuation p1)
+
+    public java.lang.Object invoke(java.lang.Object p1)
+
+    public final java.lang.Object invokeSuspend(java.lang.Object $result)
+}
+
+public final class OptInTest : java/lang/Object {
+    public void <init>()
+
+    public final static java.lang.Object access$run0(OptInTest $this, kotlin.coroutines.Continuation $completion)
+
+    public final java.lang.Object run(kotlin.coroutines.Continuation $completion)
+
+    private final java.lang.Object run0(kotlin.coroutines.Continuation $completion)
+
+    public final java.util.concurrent.CompletableFuture runAsync()
+
+    public final int runBlocking()
+}
+
+public abstract interface Values : java/lang/Object, java/lang/annotation/Annotation {
+    public abstract java.lang.Class target()
+}

@@ -12,23 +12,38 @@ FILE: Main.kt
             super<R|kotlin/Any|>()
         }
 
-        @R|love/forte/plugin/suspendtrans/annotation/JvmBlocking|() @R|love/forte/plugin/suspendtrans/annotation/TargetMarker|(value = String(ZGF0YUZvb0ludGVyZmFjZTFJbXBsbnVsbA==)) public open override suspend fun data(): R|kotlin/String| {
+        @R|love/forte/plugin/suspendtrans/annotation/JvmBlocking|() @R|kotlin/jvm/JvmSynthetic|() public open override suspend fun data(): R|kotlin/String| {
             ^data String()
         }
 
-        @R|love/forte/plugin/suspendtrans/annotation/JvmBlocking|() @R|love/forte/plugin/suspendtrans/annotation/TargetMarker|(value = String(ZGF0YTJGb29JbnRlcmZhY2UxSW1wbG51bGxrb3RsaW4vSW50)) public open override suspend fun data2(value: R|kotlin/Int|): R|kotlin/String| {
+        @R|love/forte/plugin/suspendtrans/annotation/JvmBlocking|() @R|kotlin/jvm/JvmSynthetic|() public open override suspend fun data2(value: R|kotlin/Int|): R|kotlin/String| {
             ^data2 String()
         }
 
-        @R|love/forte/plugin/suspendtrans/annotation/JvmBlocking|() @R|love/forte/plugin/suspendtrans/annotation/TargetMarker|(value = String(ZGF0YTNGb29JbnRlcmZhY2UxSW1wbGtvdGxpbi9JbnQ=)) public open override suspend fun R|kotlin/Int|.data3(): R|kotlin/String| {
+        @R|love/forte/plugin/suspendtrans/annotation/JvmBlocking|() @R|kotlin/jvm/JvmSynthetic|() public open override suspend fun R|kotlin/Int|.data3(): R|kotlin/String| {
             ^data3 String()
         }
 
-        @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public open fun data2Blocking(value: R|kotlin/Int|): R|kotlin/String|
+        @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public open fun data2Blocking(value: R|kotlin/Int|): R|kotlin/String| {
+            ^data2Blocking R|love/forte/plugin/suspendtrans/runtime/$runInBlocking$|(suspend fun <anonymous>(): R|kotlin/String| <inline=Unknown>  {
+                ^ this@R|/FooInterface1Impl|.R|/FooInterface1Impl.data2|(R|<local>/value|)
+            }
+            )
+        }
 
-        @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public open fun dataBlocking(): R|kotlin/String|
+        @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public open fun dataBlocking(): R|kotlin/String| {
+            ^dataBlocking R|love/forte/plugin/suspendtrans/runtime/$runInBlocking$|(suspend fun <anonymous>(): R|kotlin/String| <inline=Unknown>  {
+                ^ this@R|/FooInterface1Impl|.R|/FooInterface1Impl.data|()
+            }
+            )
+        }
 
-        @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public open fun R|kotlin/Int|.data3Blocking(): R|kotlin/String|
+        @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public open fun R|kotlin/Int|.data3Blocking(): R|kotlin/String| {
+            ^data3Blocking R|love/forte/plugin/suspendtrans/runtime/$runInBlocking$|(suspend fun <anonymous>(): R|kotlin/String| <inline=Unknown>  {
+                ^ (this@R|/FooInterface1Impl|, this@R|/FooInterface1Impl.data3Blocking|).R|/FooInterface1Impl.data3|()
+            }
+            )
+        }
 
     }
     public abstract interface FooInterface2 : R|kotlin/Any| {
@@ -56,23 +71,38 @@ FILE: Main.kt
             super<R|kotlin/Any|>()
         }
 
-        @R|love/forte/plugin/suspendtrans/annotation/JvmBlocking|() @R|love/forte/plugin/suspendtrans/annotation/TargetMarker|(value = String(ZGF0YUZvb0ludGVyZmFjZTJJbXBsbnVsbA==)) public open override suspend fun data(): R|kotlin/String| {
+        @R|love/forte/plugin/suspendtrans/annotation/JvmBlocking|() @R|kotlin/jvm/JvmSynthetic|() public open override suspend fun data(): R|kotlin/String| {
             ^data String()
         }
 
-        @R|love/forte/plugin/suspendtrans/annotation/JvmBlocking|() @R|love/forte/plugin/suspendtrans/annotation/TargetMarker|(value = String(ZGF0YTJGb29JbnRlcmZhY2UySW1wbG51bGxrb3RsaW4vSW50)) public open override suspend fun data2(value: R|kotlin/Int|): R|kotlin/String| {
+        @R|love/forte/plugin/suspendtrans/annotation/JvmBlocking|() @R|kotlin/jvm/JvmSynthetic|() public open override suspend fun data2(value: R|kotlin/Int|): R|kotlin/String| {
             ^data2 String()
         }
 
-        @R|love/forte/plugin/suspendtrans/annotation/JvmBlocking|() @R|love/forte/plugin/suspendtrans/annotation/TargetMarker|(value = String(ZGF0YTNGb29JbnRlcmZhY2UySW1wbGtvdGxpbi9JbnQ=)) public open override suspend fun R|kotlin/Int|.data3(): R|kotlin/String| {
+        @R|love/forte/plugin/suspendtrans/annotation/JvmBlocking|() @R|kotlin/jvm/JvmSynthetic|() public open override suspend fun R|kotlin/Int|.data3(): R|kotlin/String| {
             ^data3 String()
         }
 
-        @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public open override fun data2Blocking(value: R|kotlin/Int|): R|kotlin/String|
+        @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public open override fun data2Blocking(value: R|kotlin/Int|): R|kotlin/String| {
+            ^data2Blocking R|love/forte/plugin/suspendtrans/runtime/$runInBlocking$|(suspend fun <anonymous>(): R|kotlin/String| <inline=Unknown>  {
+                ^ this@R|/FooInterface2Impl|.R|/FooInterface2Impl.data2|(R|<local>/value|)
+            }
+            )
+        }
 
-        @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public open override fun dataBlocking(): R|kotlin/String|
+        @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public open override fun dataBlocking(): R|kotlin/String| {
+            ^dataBlocking R|love/forte/plugin/suspendtrans/runtime/$runInBlocking$|(suspend fun <anonymous>(): R|kotlin/String| <inline=Unknown>  {
+                ^ this@R|/FooInterface2Impl|.R|/FooInterface2Impl.data|()
+            }
+            )
+        }
 
-        @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public open override fun R|kotlin/Int|.data3Blocking(): R|kotlin/String|
+        @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public open override fun R|kotlin/Int|.data3Blocking(): R|kotlin/String| {
+            ^data3Blocking R|love/forte/plugin/suspendtrans/runtime/$runInBlocking$|(suspend fun <anonymous>(): R|kotlin/String| <inline=Unknown>  {
+                ^ (this@R|/FooInterface2Impl|, this@R|/FooInterface2Impl.data3Blocking|).R|/FooInterface2Impl.data3|()
+            }
+            )
+        }
 
     }
     public abstract interface FooInterface3 : R|kotlin/Any| {
@@ -89,22 +119,37 @@ FILE: Main.kt
             super<R|kotlin/Any|>()
         }
 
-        @R|love/forte/plugin/suspendtrans/annotation/JvmBlocking|(asProperty = Boolean(true)) @R|love/forte/plugin/suspendtrans/annotation/TargetMarker|(value = String(ZGF0YUZvb0ludGVyZmFjZTNJbXBsbnVsbA==)) public open override suspend fun data(): R|kotlin/String| {
+        @R|love/forte/plugin/suspendtrans/annotation/JvmBlocking|(asProperty = Boolean(true)) @R|kotlin/jvm/JvmSynthetic|() public open override suspend fun data(): R|kotlin/String| {
             ^data String()
         }
 
         @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public open override val dataBlocking: R|kotlin/String|
-            @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public get(): R|kotlin/String|
+            @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public get(): R|kotlin/String| {
+                ^ R|love/forte/plugin/suspendtrans/runtime/$runInBlocking$|(suspend fun <anonymous>(): R|kotlin/String| <inline=Unknown>  {
+                    ^ this@R|/FooInterface3Impl|.R|/FooInterface3Impl.data|()
+                }
+                )
+            }
 
     }
     public abstract interface FooInterface4 : R|kotlin/Any| {
-        @R|love/forte/plugin/suspendtrans/annotation/JvmBlocking|() @R|love/forte/plugin/suspendtrans/annotation/TargetMarker|(value = String(ZGF0YUZvb0ludGVyZmFjZTRudWxs)) public abstract suspend fun data(): R|kotlin/String|
+        @R|love/forte/plugin/suspendtrans/annotation/JvmBlocking|() @R|kotlin/jvm/JvmSynthetic|() public abstract suspend fun data(): R|kotlin/String|
 
-        @R|love/forte/plugin/suspendtrans/annotation/JvmBlocking|() @R|love/forte/plugin/suspendtrans/annotation/TargetMarker|(value = String(ZGF0YTJGb29JbnRlcmZhY2U0bnVsbGtvdGxpbi9JbnQ=)) public abstract suspend fun data2(value: R|kotlin/Int|): R|kotlin/String|
+        @R|love/forte/plugin/suspendtrans/annotation/JvmBlocking|() @R|kotlin/jvm/JvmSynthetic|() public abstract suspend fun data2(value: R|kotlin/Int|): R|kotlin/String|
 
-        @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public open fun data2Blocking(value: R|kotlin/Int|): R|kotlin/String|
+        @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public open fun data2Blocking(value: R|kotlin/Int|): R|kotlin/String| {
+            ^data2Blocking R|love/forte/plugin/suspendtrans/runtime/$runInBlocking$|(suspend fun <anonymous>(): R|kotlin/String| <inline=Unknown>  {
+                ^ this@R|/FooInterface4|.R|/FooInterface4.data2|(R|<local>/value|)
+            }
+            )
+        }
 
-        @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public open fun dataBlocking(): R|kotlin/String|
+        @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public open fun dataBlocking(): R|kotlin/String| {
+            ^dataBlocking R|love/forte/plugin/suspendtrans/runtime/$runInBlocking$|(suspend fun <anonymous>(): R|kotlin/String| <inline=Unknown>  {
+                ^ this@R|/FooInterface4|.R|/FooInterface4.data|()
+            }
+            )
+        }
 
     }
     public final class FooInterface4Impl : R|FooInterface4| {
@@ -112,16 +157,26 @@ FILE: Main.kt
             super<R|kotlin/Any|>()
         }
 
-        @R|love/forte/plugin/suspendtrans/annotation/JvmBlocking|() @R|love/forte/plugin/suspendtrans/annotation/TargetMarker|(value = String(ZGF0YUZvb0ludGVyZmFjZTRJbXBsbnVsbA==)) public open override suspend fun data(): R|kotlin/String| {
+        @R|love/forte/plugin/suspendtrans/annotation/JvmBlocking|() @R|kotlin/jvm/JvmSynthetic|() public open override suspend fun data(): R|kotlin/String| {
             ^data String()
         }
 
-        @R|love/forte/plugin/suspendtrans/annotation/JvmBlocking|() @R|love/forte/plugin/suspendtrans/annotation/TargetMarker|(value = String(ZGF0YTJGb29JbnRlcmZhY2U0SW1wbG51bGxrb3RsaW4vSW50)) public open override suspend fun data2(value: R|kotlin/Int|): R|kotlin/String| {
+        @R|love/forte/plugin/suspendtrans/annotation/JvmBlocking|() @R|kotlin/jvm/JvmSynthetic|() public open override suspend fun data2(value: R|kotlin/Int|): R|kotlin/String| {
             ^data2 String()
         }
 
-        @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public open override fun data2Blocking(value: R|kotlin/Int|): R|kotlin/String|
+        @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public open override fun data2Blocking(value: R|kotlin/Int|): R|kotlin/String| {
+            ^data2Blocking R|love/forte/plugin/suspendtrans/runtime/$runInBlocking$|(suspend fun <anonymous>(): R|kotlin/String| <inline=Unknown>  {
+                ^ this@R|/FooInterface4Impl|.R|/FooInterface4Impl.data2|(R|<local>/value|)
+            }
+            )
+        }
 
-        @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public open override fun dataBlocking(): R|kotlin/String|
+        @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public open override fun dataBlocking(): R|kotlin/String| {
+            ^dataBlocking R|love/forte/plugin/suspendtrans/runtime/$runInBlocking$|(suspend fun <anonymous>(): R|kotlin/String| <inline=Unknown>  {
+                ^ this@R|/FooInterface4Impl|.R|/FooInterface4Impl.data|()
+            }
+            )
+        }
 
     }

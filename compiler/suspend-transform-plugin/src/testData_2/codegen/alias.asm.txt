@@ -1,0 +1,49 @@
+public final class MainKt : java/lang/Object {
+
+}
+
+final class MyClass$errorReproductionAsync$1 : kotlin/coroutines/jvm/internal/SuspendLambda, kotlin/jvm/functions/Function1 {
+    final long $amount
+
+    int label
+
+    final MyClass this$0
+
+    void <init>(MyClass $receiver, long $amount, kotlin.coroutines.Continuation p2)
+
+    public final kotlin.coroutines.Continuation create(kotlin.coroutines.Continuation $completion)
+
+    public final java.lang.Object invoke(kotlin.coroutines.Continuation p1)
+
+    public java.lang.Object invoke(java.lang.Object p1)
+
+    public final java.lang.Object invokeSuspend(java.lang.Object $result)
+}
+
+final class MyClass$errorReproductionBlocking$1 : kotlin/coroutines/jvm/internal/SuspendLambda, kotlin/jvm/functions/Function1 {
+    final long $amount
+
+    int label
+
+    final MyClass this$0
+
+    void <init>(MyClass $receiver, long $amount, kotlin.coroutines.Continuation p2)
+
+    public final kotlin.coroutines.Continuation create(kotlin.coroutines.Continuation $completion)
+
+    public final java.lang.Object invoke(kotlin.coroutines.Continuation p1)
+
+    public java.lang.Object invoke(java.lang.Object p1)
+
+    public final java.lang.Object invokeSuspend(java.lang.Object $result)
+}
+
+public final class MyClass : java/lang/Object {
+    public void <init>()
+
+    public final java.lang.Object errorReproduction(long amount, kotlin.coroutines.Continuation p1)
+
+    public final java.util.concurrent.CompletableFuture errorReproductionAsync(long amount)
+
+    public final void errorReproductionBlocking(long amount)
+}

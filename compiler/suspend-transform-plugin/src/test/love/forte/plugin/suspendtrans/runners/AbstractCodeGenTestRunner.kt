@@ -26,7 +26,7 @@ abstract class AbstractCodeGenTestRunner : AbstractTestRunner() {
         }
 
         configureJvmArtifactsHandlersStep {
-            useHandlers(::BytecodeListingHandler,::AsmLikeInstructionListingHandler, )
+            useHandlers(::BytecodeListingHandler, ::AsmLikeInstructionListingHandler)
         }
 
         defaultDirectives {

@@ -1,0 +1,43 @@
+FILE: Main.kt
+    public final class PropFoo : R|kotlin/Any| {
+        public constructor(): R|PropFoo| {
+            super<R|kotlin/Any|>()
+        }
+
+        @R|love/forte/plugin/suspendtrans/annotation/JvmBlocking|(asProperty = Boolean(true), suffix = String()) @R|love/forte/plugin/suspendtrans/annotation/JvmAsync|(asProperty = Boolean(true)) @R|love/forte/plugin/suspendtrans/annotation/TargetMarker|(value = String(cHJvcFByb3BGb29udWxs)) public final suspend fun prop(): R|kotlin/String| {
+            ^prop String()
+        }
+
+        @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public final val prop: R|kotlin/String|
+            @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public get(): R|kotlin/String|
+
+        @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public final val propAsync: R|java/util/concurrent/CompletableFuture<out kotlin/String>|
+            @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public get(): R|kotlin/String|
+
+    }
+    public abstract interface IProp : R|kotlin/Any| {
+        @R|love/forte/plugin/suspendtrans/annotation/JvmBlocking|(asProperty = Boolean(true), suffix = String()) @R|love/forte/plugin/suspendtrans/annotation/JvmAsync|(asProperty = Boolean(true)) @R|love/forte/plugin/suspendtrans/annotation/TargetMarker|(value = String(cHJvcElQcm9wbnVsbA==)) public abstract suspend fun prop(): R|kotlin/String|
+
+        @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public open val prop: R|kotlin/String|
+            @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public get(): R|kotlin/String|
+
+        @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public open val propAsync: R|java/util/concurrent/CompletableFuture<out kotlin/String>|
+            @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public get(): R|kotlin/String|
+
+    }
+    public final class PropImpl : R|IProp| {
+        public constructor(): R|PropImpl| {
+            super<R|kotlin/Any|>()
+        }
+
+        @R|love/forte/plugin/suspendtrans/annotation/JvmBlocking|(asProperty = Boolean(true), suffix = String()) @R|love/forte/plugin/suspendtrans/annotation/JvmAsync|(asProperty = Boolean(true)) @R|love/forte/plugin/suspendtrans/annotation/TargetMarker|(value = String(cHJvcFByb3BJbXBsbnVsbA==)) public open override suspend fun prop(): R|kotlin/String| {
+            ^prop String()
+        }
+
+        @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public open override val prop: R|kotlin/String|
+            @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public get(): R|kotlin/String|
+
+        @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public open override val propAsync: R|java/util/concurrent/CompletableFuture<out kotlin/String>|
+            @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public get(): R|kotlin/String|
+
+    }

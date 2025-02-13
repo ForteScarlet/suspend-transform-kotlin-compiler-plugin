@@ -1,0 +1,34 @@
+FILE: Main.kt
+    @R|kotlin/RequiresOptIn|(level = Q|kotlin/RequiresOptIn.Level|.R|kotlin/RequiresOptIn.Level.ERROR|) public final annotation class OneOptAnno : R|kotlin/Annotation| {
+        public constructor(): R|OneOptAnno| {
+            super<R|kotlin/Any|>()
+        }
+
+    }
+    public final annotation class Values : R|kotlin/Annotation| {
+        public constructor(target: R|kotlin/reflect/KClass<*>|): R|Values| {
+            super<R|kotlin/Any|>()
+        }
+
+        public final val target: R|kotlin/reflect/KClass<*>| = R|<local>/target|
+            public get(): R|kotlin/reflect/KClass<*>|
+
+    }
+    public final class OptInTest : R|kotlin/Any| {
+        public constructor(): R|OptInTest| {
+            super<R|kotlin/Any|>()
+        }
+
+        @R|OneOptAnno|() private final suspend fun run0(): R|kotlin/Int| {
+            ^run0 Int(1)
+        }
+
+        @R|kotlin/OptIn|(markerClass = vararg(<getClass>(Q|OneOptAnno|))) @R|Values|(target = <getClass>(Q|OptInTest|)) @R|love/forte/plugin/suspendtrans/annotation/JvmBlocking|() @R|love/forte/plugin/suspendtrans/annotation/JvmAsync|() @R|love/forte/plugin/suspendtrans/annotation/TargetMarker|(value = String(cnVuT3B0SW5UZXN0bnVsbA==)) public final suspend fun run(): R|kotlin/Int| {
+            ^run this@R|/OptInTest|.R|/OptInTest.run0|()
+        }
+
+        @R|Values|(target = <getClass>(Q|OptInTest|)) @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public final fun runAsync(): R|java/util/concurrent/CompletableFuture<out kotlin/Int>|
+
+        @R|Values|(target = <getClass>(Q|OptInTest|)) @R|love/forte/plugin/suspendtrans/annotation/Api4J|() public final fun runBlocking(): R|kotlin/Int|
+
+    }

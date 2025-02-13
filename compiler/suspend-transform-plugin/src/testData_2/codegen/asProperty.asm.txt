@@ -1,0 +1,141 @@
+public final class IProp$DefaultImpls : java/lang/Object {
+    public static java.lang.String getProp(IProp $this)
+
+    public static void getProp$annotations()
+
+    public static java.util.concurrent.CompletableFuture getPropAsync(IProp $this)
+
+    public static void getPropAsync$annotations()
+}
+
+final class IProp$prop$1 : kotlin/coroutines/jvm/internal/SuspendLambda, kotlin/jvm/functions/Function1 {
+    int label
+
+    final IProp this$0
+
+    void <init>(IProp $receiver, kotlin.coroutines.Continuation $completion)
+
+    public final kotlin.coroutines.Continuation create(kotlin.coroutines.Continuation $completion)
+
+    public final java.lang.Object invoke(kotlin.coroutines.Continuation p1)
+
+    public java.lang.Object invoke(java.lang.Object p1)
+
+    public final java.lang.Object invokeSuspend(java.lang.Object $result)
+}
+
+final class IProp$propAsync$1 : kotlin/coroutines/jvm/internal/SuspendLambda, kotlin/jvm/functions/Function1 {
+    int label
+
+    final IProp this$0
+
+    void <init>(IProp $receiver, kotlin.coroutines.Continuation $completion)
+
+    public final kotlin.coroutines.Continuation create(kotlin.coroutines.Continuation $completion)
+
+    public final java.lang.Object invoke(kotlin.coroutines.Continuation p1)
+
+    public java.lang.Object invoke(java.lang.Object p1)
+
+    public final java.lang.Object invokeSuspend(java.lang.Object $result)
+}
+
+public abstract interface IProp : java/lang/Object {
+    public abstract java.lang.String getProp()
+
+    public abstract java.util.concurrent.CompletableFuture getPropAsync()
+
+    public abstract java.lang.Object prop(kotlin.coroutines.Continuation p0)
+}
+
+final class PropFoo$prop$2 : kotlin/coroutines/jvm/internal/SuspendLambda, kotlin/jvm/functions/Function1 {
+    int label
+
+    final PropFoo this$0
+
+    void <init>(PropFoo $receiver, kotlin.coroutines.Continuation $completion)
+
+    public final kotlin.coroutines.Continuation create(kotlin.coroutines.Continuation $completion)
+
+    public final java.lang.Object invoke(kotlin.coroutines.Continuation p1)
+
+    public java.lang.Object invoke(java.lang.Object p1)
+
+    public final java.lang.Object invokeSuspend(java.lang.Object $result)
+}
+
+final class PropFoo$propAsync$1 : kotlin/coroutines/jvm/internal/SuspendLambda, kotlin/jvm/functions/Function1 {
+    int label
+
+    final PropFoo this$0
+
+    void <init>(PropFoo $receiver, kotlin.coroutines.Continuation $completion)
+
+    public final kotlin.coroutines.Continuation create(kotlin.coroutines.Continuation $completion)
+
+    public final java.lang.Object invoke(kotlin.coroutines.Continuation p1)
+
+    public java.lang.Object invoke(java.lang.Object p1)
+
+    public final java.lang.Object invokeSuspend(java.lang.Object $result)
+}
+
+public final class PropFoo : java/lang/Object {
+    public void <init>()
+
+    public final java.lang.String getProp()
+
+    public static void getProp$annotations()
+
+    public final java.util.concurrent.CompletableFuture getPropAsync()
+
+    public static void getPropAsync$annotations()
+
+    public final java.lang.Object prop(kotlin.coroutines.Continuation $completion)
+}
+
+final class PropImpl$prop$2 : kotlin/coroutines/jvm/internal/SuspendLambda, kotlin/jvm/functions/Function1 {
+    int label
+
+    final PropImpl this$0
+
+    void <init>(PropImpl $receiver, kotlin.coroutines.Continuation $completion)
+
+    public final kotlin.coroutines.Continuation create(kotlin.coroutines.Continuation $completion)
+
+    public final java.lang.Object invoke(kotlin.coroutines.Continuation p1)
+
+    public java.lang.Object invoke(java.lang.Object p1)
+
+    public final java.lang.Object invokeSuspend(java.lang.Object $result)
+}
+
+final class PropImpl$propAsync$1 : kotlin/coroutines/jvm/internal/SuspendLambda, kotlin/jvm/functions/Function1 {
+    int label
+
+    final PropImpl this$0
+
+    void <init>(PropImpl $receiver, kotlin.coroutines.Continuation $completion)
+
+    public final kotlin.coroutines.Continuation create(kotlin.coroutines.Continuation $completion)
+
+    public final java.lang.Object invoke(kotlin.coroutines.Continuation p1)
+
+    public java.lang.Object invoke(java.lang.Object p1)
+
+    public final java.lang.Object invokeSuspend(java.lang.Object $result)
+}
+
+public final class PropImpl : java/lang/Object, IProp {
+    public void <init>()
+
+    public java.lang.String getProp()
+
+    public static void getProp$annotations()
+
+    public java.util.concurrent.CompletableFuture getPropAsync()
+
+    public static void getPropAsync$annotations()
+
+    public java.lang.Object prop(kotlin.coroutines.Continuation $completion)
+}
